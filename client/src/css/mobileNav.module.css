@@ -1,0 +1,8 @@
+.d-no{
+    display: none !important;
+}
+@media screen and (max-width: 992px){
+    .d-no{
+        display: block !important;
+    }
+}
