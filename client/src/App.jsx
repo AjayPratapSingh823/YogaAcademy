@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import Header from './components/Header';
 import Home from './components/Home';
 import IAmNewHere from './components/IAmNewHere';
@@ -26,7 +27,7 @@ import UserInfo from "./admin-components/UserInfo"
 import TrainerBlogs from "./trainer components/TrainerBlogs"
 import TrainerProfile from "./trainer components/TrainerProfile"
 // Auth
-import UserLogin from './auth-components/UserLogin';
+const UserLogin=React.lazy(()=>import('./auth-components/UserLogin'))
 import UserSignup from './auth-components/UserSignup';
 import ResetPassword from './auth-components/ResetPassword';
 import ForgotPassword from './auth-components/ForgotPassword';
@@ -62,7 +63,9 @@ const App = () => {
         <Route path='/trainer-blogs' element={<TrainerBlogs />} />
         <Route path='/trainer-profile' element={<TrainerProfile />} />
         {/* Auth */}
-        <Route path='/user-login' element={<UserLogin />} />
+        <Route path='/user-login' element={<Suspense fallback={<div>Loading...</div>}>
+      <UserLogin />
+</Suspense>} />
         <Route path='/user-signup' element={<UserSignup />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
