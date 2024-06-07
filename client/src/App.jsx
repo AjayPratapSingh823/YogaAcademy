@@ -26,8 +26,8 @@ import UserInfo from "./admin-components/UserInfo"
 import TrainerBlogs from "./trainer components/TrainerBlogs"
 import TrainerProfile from "./trainer components/TrainerProfile"
 // Auth
-import Login from './auth-components/Login';
-import Signin from './auth-components/Signin';
+import UserLogin from './auth-components/UserLogin';
+import UserSignup from './auth-components/UserSignup';
 
 const App = () => {
   return (
@@ -60,8 +60,8 @@ const App = () => {
         <Route path='/trainer-blogs' element={<TrainerBlogs />} />
         <Route path='/trainer-profile' element={<TrainerProfile />} />
         {/* Auth */}
-        <Route path='/login' element={<Login />} />
-        <Route path='/signin' element={<Signin />} />
+        <Route path='/user-login' element={<UserLogin />} />
+        <Route path='/user-signup' element={<UserSignup />} />
       </Routes>
       </BrowserRouter>
     </div>
