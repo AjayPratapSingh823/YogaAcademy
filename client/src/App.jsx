@@ -28,6 +28,8 @@ import TrainerProfile from "./trainer components/TrainerProfile"
 // Auth
 import UserLogin from './auth-components/UserLogin';
 import UserSignup from './auth-components/UserSignup';
+import ResetPassword from './auth-components/ResetPassword';
+import ForgotPassword from './auth-components/ForgotPassword';
 
 const App = () => {
   return (
@@ -62,6 +64,8 @@ const App = () => {
         {/* Auth */}
         <Route path='/user-login' element={<UserLogin />} />
         <Route path='/user-signup' element={<UserSignup />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/reset-password' element={<ResetPassword />} />
       </Routes>
       </BrowserRouter>
     </div>
