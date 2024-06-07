@@ -1,4 +1,4 @@
-import React from 'react'
+
 import css from "../css/login.module.css";
 import imgYogaLogin from "../../assests/yoga-login.jpg";
 
