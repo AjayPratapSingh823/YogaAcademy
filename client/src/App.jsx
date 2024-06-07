@@ -31,6 +31,7 @@ const UserLogin=React.lazy(()=>import('./auth-components/UserLogin'))
 import UserSignup from './auth-components/UserSignup';
 import ResetPassword from './auth-components/ResetPassword';
 import ForgotPassword from './auth-components/ForgotPassword';
+import UserDashboard from './user-components/UserDashboard';
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/private-class" element={<PrivateClass />} />
         <Route path="/yoga-workshops" element={<YogaWorkshops />} />
         {/* User */}
+        <Route path='/user-dashboard' element={<UserDashboard />} />
         <Route path='/user-cart' element={<UserCart />} />
         <Route path='/user-opt-courses' element={<UserOptCourses />} />
         <Route path='/user-payment' element={<UserPayment />} />

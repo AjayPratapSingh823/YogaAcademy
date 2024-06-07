@@ -1,0 +1,7 @@
+.user-profile{
+    overflow-y: scroll;
+    height: 76vh;
+}
+.user-profile::-webkit-scrollbar{
+    width: 0;
+}
