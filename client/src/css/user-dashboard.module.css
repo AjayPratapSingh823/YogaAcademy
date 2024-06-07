@@ -1,0 +1,48 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.one{
+    width: 25%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 79vh;
+}
+.my-list{
+    display: flex;
+    flex-direction: column;
+}
+.my-list a{
+    padding: 20px;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    color: white;
+}
+.my-list a:hover{
+    background-color: white;
+    color: green;
+    transition: all 1s ease;
+}
+.third{
+    width: 75%;
+}
+.user-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 455px) {
+    .one{
+        width: 100%;
+        height: 100%;
+    }
+    .third{
+        width: 100%;
+    }
+}

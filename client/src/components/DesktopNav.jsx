@@ -132,7 +132,7 @@ const DesktopNav = () => {
         </ul>
       </div>
       <div>
-        <a href="/user-profile" className='btn btn-outline-success'><img src={userImg} className={`${css["user-img"]}`} /></a>
+        <a href="/user-dashboard" className='btn btn-outline-success'><img src={userImg} className={`${css["user-img"]}`} /></a>
         <a href='/group-class' className="btn btn-success m-2">Book a Class</a>
       </div>
     </div>
