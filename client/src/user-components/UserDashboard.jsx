@@ -3,9 +3,20 @@ import css from "../css/user-dashboard.module.css";
 import userImg from "../../assests/user.jpg";
 import UserOptCourses from "./UserOptCourses";
 import UserProfile from "./UserProfile";
+import UserCart from "./UserCart";
 
 const UserDashboard = () => {
-  const [dashNum, setDashNum] = useState("1");
+  const [dashNum, setDashNum] = useState("0");
+
+  let dashRoute = ()=>{
+    if(dashNum === "0"){
+      return <UserProfile />
+    } else if(dashNum === "1"){
+      return <UserOptCourses />
+    } else {
+      return <UserCart />
+    }
+  }
 
   return (
     <div>
@@ -15,19 +26,21 @@ const UserDashboard = () => {
           <h2 className="text-light m-2">Welcome User!</h2>
           <div>
             <div className={css["my-list"]}>
-              <a onClick={() => setDashNum("2")} href="#">
-                Your Courses
-              </a>
-              <a href="#">
-                Buy new course
-              </a>
-              <a onClick={() => setDashNum("1")} href="#">My Profile</a>
-              <a href="#">Logout</a>
+              <a onClick={() => setDashNum("0")} className={
+                dashNum === "0" ? "bg-white text-success" : ""
+              } href="#">My Profile</a>
+              <a onClick={() => setDashNum("1")} className={
+                dashNum === "1" ? "bg-white text-success" : ""
+              } href="#">Your Courses</a>
+              <a onClick={() => setDashNum("2")} className={
+                dashNum === "2" ? "bg-white text-success" : ""
+              } href="#">Your Cart</a>
+              <a href="/home">Logout</a>
             </div>
           </div>
         </div>
         <div className={`${css["third"]} p-3`}>
-          {dashNum === "1" ? <UserProfile /> : <UserOptCourses />}
+          {dashRoute()}
         </div>
       </div>
     </div>

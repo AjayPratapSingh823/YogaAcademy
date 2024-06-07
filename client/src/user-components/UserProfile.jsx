@@ -1,12 +1,17 @@
-import React from "react";
-import css from "../css/user-profile.module.css"
+import React, { useState } from "react";
+import css from "../css/user-profile.module.css";
 
 const UserProfile = () => {
   return (
     <div className={css["user-profile"]}>
       <h2 className="text-success p-2">User Profile</h2>
       <div className="m-2 border rounded">
-        <h4 className="m-2 btn-success btn">Profile Pic</h4>
+        <h4
+          onClick={() => setIsUploadClicked(true)}
+          className="m-2 btn-outline-success btn"
+        >
+          Update Profile Pic
+        </h4>
         <div class="container p-4">
           <div class="input-group mb-3">
             <input type="file" class="form-control" id="inputGroupFile02" />

@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 .my-list a{
-    padding: 20px;
+    padding: 20px 40px;
     border-bottom: 2px solid white;
     text-decoration: none;
     color: white;

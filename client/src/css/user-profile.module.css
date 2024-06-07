@@ -1,6 +1,6 @@
 .user-profile{
     overflow-y: scroll;
-    height: 76vh;
+    height: 74vh;
 }
 .user-profile::-webkit-scrollbar{
     width: 0;
