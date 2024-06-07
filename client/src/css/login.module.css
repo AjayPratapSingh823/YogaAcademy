@@ -24,7 +24,7 @@ form{
 }
 form input{
     padding: 10px 20px;
-    width: 200px;
+    width: 300px;
     border-radius: 15px;
     border: 1px solid black;
 }
@@ -33,6 +33,20 @@ form button{
     border-radius: 15px;
     background-color: gold;
     border: 1px solid black;
+}
+.google-btn{
+    border: 1px solid gold;
+    padding: 5px 25px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: white;
+}
+.google-btn:hover{
+    background-color: gold;
+}
+.google-btn img{
+    width: 25px;
+    height: 25px;
 }
 
 .forgot-password a {
@@ -44,7 +58,6 @@ form button{
 }
 .image1 img{
     width: 300px;
-    height: 500px;
     border-radius: 5px;
 }
 .dont{
@@ -61,5 +74,11 @@ form button{
 @media screen and (max-width: 425px) {
     .container {
         text-align: center;
+    }
+    form input{
+        width: 200px;
+    }
+    .image1 img{
+        width: 200px;
     }
 }
