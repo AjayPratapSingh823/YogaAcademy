@@ -1,0 +1,21 @@
+.user-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+
+/* Dropdown Hover */
+.dropdown:hover>.dropdown-menu {
+    display: block !important;
+}
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none !important;
+}
+
+@media screen and (max-width: 992px) {
+    .m-no{
+        display: none !important;
+    }
+}

@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+.container {
+    padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+.login-form{
+    border: 1px solid black;
+    padding: 25px; 
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+form input{
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+form button{
+    padding: 5px 25px;
+    border-radius: 15px;
+    background-color: gold;
+    border: 1px solid black;
+}
+
+.forgot-password a {
+  color: black;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+.image1 img{
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+}
+.dont{
+    color: #555;
+}
+.sign-in a{
+    padding: 5px 25px;
+    border-radius: 15px;
+    background-color: gold;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width: 425px) {
+    .container {
+        text-align: center;
+    }
+}
