@@ -6,8 +6,9 @@ const connection = require('./db');
 const PORT=process.env.PORT
 const UserRoutes=require('./routes/UserRoutes')
 
-app.use(cors);
 
+app.use(cors());
+app.use(express.json());
 connection();
 app.use('/api',UserRoutes)
 

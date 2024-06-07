@@ -19,10 +19,12 @@ const UserLogin = () => {
             [name]:value,
         })
     }
-    const handleSubmit=async()=>{
+    const handleSubmit=async(e)=>{
+      e.preventDefault()
         try{
-          const response = await axios.post('http://localhost:400/api/user-login',Form);
+          const response = await axios.post('http://localhost:4000/api/user-login',Form);
           console.log(response);
+          console.log('login successful');
           setMessage(`Login Sucessfully`)
         }
         catch(err){
@@ -50,7 +52,7 @@ const UserLogin = () => {
         <div className={`${css["forgot-password"]}`}>
           <a href="/forgot-password">Forgot password?</a>
         </div>
-        <p className={css["dont"]}>Don't have an account?</p>
+        <p className={css["dont"]}>Dont have an account?</p>
         <div className={`${css["sign-in"]}`}>
           <a href="/user-signup">Sign up</a>
         </div>

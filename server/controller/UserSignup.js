@@ -1,15 +1,16 @@
-const express= express();
+const express= require('express');
 const UserSchema= require('../models/User');
 const bcrypt=require('bcrypt');
 const UserSignup=async(req,res)=>{
     try{
-    const {fullname, email, password} =req.body;
-    const existedemail= await UserSchema.find({email:email});
+    const {fullname, phone,email, password} =req.body;
+    const existedemail= await UserSchema.findOne({email:email});
     if(existedemail)
         res.status(400).send(`This email already exists`);
-    const hashedpassword= bcrypt(password,10)
+    const hashedpassword= await bcrypt.hash(password,10)
     const newuser=new UserSchema({
         fullname:fullname,
+        phone:phone,
         email:email,
         password:hashedpassword,
     })
@@ -20,4 +21,4 @@ const UserSignup=async(req,res)=>{
     res.status(500).send('err',err);
 }
 }
-module.exports=UserSignup;
+module.exports={UserSignup};
