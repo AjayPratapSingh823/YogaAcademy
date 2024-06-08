@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import css from "../css/user-dashboard.module.css";
-import userImg from "../../assests/user.jpg";
+import userImg from "../../assets/user.jpg";
 import UserOptCourses from "./UserOptCourses";
 import UserProfile from "./UserProfile";
 import UserCart from "./UserCart";

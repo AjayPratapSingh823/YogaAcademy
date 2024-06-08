@@ -52,7 +52,6 @@
     width: 200px;
 }
 .innerDiv2 i{
-    /* border: 1px solid black; */
     margin: 0 10px 0 30px;
     padding: 16px;
     border-radius: 50%;
@@ -77,7 +76,6 @@
 .lapingDiv{
     width: 600px;
     height: 160px;
-    /* border: 2px solid blue; */
     margin: 10px 0;
     background-color: white;
     display: flex;
@@ -107,7 +105,6 @@
 .thirdOuter2{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid blue; */
     padding: 20px 10px 0 20px;
     text-align:start;
 }
@@ -253,7 +250,6 @@
 	place-items: center;
 }
 #slider .slide div:nth-of-type(1){
-    /* border: 1px solid red; */
     height: 190px;
     width: 100%;
 
@@ -264,7 +260,6 @@
     border-radius: 5px 5px 0 0;
 }
 #slider .slide div:nth-of-type(2){
-    /* border: 1px solid blue; */
     height: 200px;
     width: 100%;
     display: flex;
@@ -288,14 +283,12 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* background-color: aqua; */
     padding: 50px 100px;
 }
 .portFolioSec h2{
     font-size: 3.5rem;
 }
 .portfolioImgs{
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -304,8 +297,6 @@
     overflow: hidden;
 }
 .PortfolioOuter{
-    /* height: 300px; */
-    /* border: 2px solid blue; */
     margin: 10px 40px;
 }
 .portfolioImgs div:nth-of-type(2){
@@ -319,7 +310,6 @@
     height: 300px;
 }
 .PortfolioOuter div{
-    /* border: 2px solid violet; */
     height: 300px;
     width: 500px;
     margin: 0 10px;
@@ -337,7 +327,6 @@
 .planBox{
     width: 310px;
     height: 507px;
-    /* border: 1px solid #01a5c0; */
     border-radius: 5px;
     padding: 0 10px;
     box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.1);
@@ -347,7 +336,6 @@
     border: 2px solid #01a5c0;
 }
 .planPricing{
-    /* border: 2px solid red; */
     border-bottom: 1px solid gray;
     height: 40%;
     display: flex;
@@ -363,7 +351,6 @@
     color: #01a5c0;
 }
 .planFeatures{
-    /* border: 2px solid violet; */
     height: 58%;
     display: flex;
     flex-direction: column;
@@ -387,9 +374,8 @@
 }
 .planFeatures i{
     background-color: rgb(211, 222, 250);
-    ;
     border-radius: 50%;
-    padding: 3px;
+    padding: 10px;
     color: rgb(1, 165, 192);
 }
 
@@ -404,7 +390,6 @@
 .expertOuter{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid orange; */
     box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.1);
 }
 .expertInner{
@@ -435,34 +420,32 @@
 .clientDiv{
     width: 400px;
     height: 300px;
-    /* border: 1px solid #282828; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.1);
 }
 .clientInfo{
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding-right:40px;
 }
-/* .clientImg{
-    border: 1px solid salmon;
-}
-.clientData{
-    border: 1px solid navy;
-} */
 .clientData p{
     color: #01a5c0;
 }
 .clientFeedback{
-    /* border: 1px solid green; */
     padding: 0 10px;
 }
 
-
+.slide h5{
+    font-style: italic;
+    font-size: 20px;
+}
+.slide p{
+    color: #696969;
+    font-style: italic;
+}
 
 @media only screen and (min-width: 1100px) {
 	#slider-container #slider .slide {

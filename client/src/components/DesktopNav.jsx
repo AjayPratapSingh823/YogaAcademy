@@ -1,6 +1,6 @@
 import React from 'react'
 import css from "../css/desktopNav.module.css"
-import userImg from '../../assests/user.jpg';
+import userImg from '../../assets/user.jpg';
 
 const DesktopNav = () => {
   return (

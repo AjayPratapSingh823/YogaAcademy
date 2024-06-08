@@ -19,7 +19,7 @@ const UserProfile = () => {
     <div className={css["user-profile"]}>
       <h2 className="text-success p-2">User Profile</h2>
       <div className="m-2 border rounded">
-        <h4 className="m-2 btn-outline-success btn">Update Profile Pic</h4>
+        <h4 className="m-2 btn-success btn">Update Profile Pic</h4>
         <div className="container p-4">
           <div class="input-group mb-3 w-lg-50">
             <input type="file" class="form-control" id="inputGroupFile02" />

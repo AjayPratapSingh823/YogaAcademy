@@ -1,8 +1,8 @@
 import { useState } from "react";
 import css from "../css/login.module.css";
 import axios from 'axios'
-import imgYogaLogin from "../../assests/yoga-login.jpg";
-import imgGoogle from "../../assests/Google.png"
+import imgYogaLogin from "../../assets/yoga-login.jpg";
+import imgGoogle from "../../assets/Google.png"
 
 // {`${css[]}`}
 

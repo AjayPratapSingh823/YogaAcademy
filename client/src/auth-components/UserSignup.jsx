@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import css from "../css/login.module.css";
-import imgYogaLogin from "../../assests/yoga-login.jpg";
+import imgYogaLogin from "../../assets/yoga-login.jpg";
 import axios from 'axios';
 const UserSignup = () => {
   const [Form,setForm]=useState({

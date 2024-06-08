@@ -1,5 +1,33 @@
 import React from "react";
 import css from "../css/home.module.css"
+import crImg1 from "../../assets/Home assets/carouselImg1.jpg"
+import crImg2 from "../../assets/Home assets/carouselImg2.jpg"
+import crImg3 from "../../assets/Home assets/carouselImg3.jpg"
+import cImg1 from "../../assets/Home assets/clientImg1.png"
+import cImg2 from "../../assets/Home assets/clientImg2.png"
+import eImg1 from "../../assets/Home assets/expertImg1.png"
+import eImg2 from "../../assets/Home assets/expertImg2.png"
+import eImg3 from "../../assets/Home assets/expertImg3.png"
+import eImg4 from "../../assets/Home assets/expertImg4.png"
+import fImg1 from "../../assets/Home assets/factImg1.png"
+import fImg2 from "../../assets/Home assets/factImg2.png"
+import fImg3 from "../../assets/Home assets/factImg3.png"
+import fImg4 from "../../assets/Home assets/factImg4.png"
+import lImg1 from "../../assets/Home assets/lapingImg1.png"
+import lImg2 from "../../assets/Home assets/lapingImg2.png"
+import lImg3 from "../../assets/Home assets/lapingImg3.png"
+import lImg4 from "../../assets/Home assets/lapingImg4.png"
+import pImg1 from "../../assets/Home assets/portpolioImg1.png"
+import pImg2 from "../../assets/Home assets/portpolioImg2.png"
+import pImg3 from "../../assets/Home assets/portpolioImg3.png"
+import pImg4 from "../../assets/Home assets/portpolioImg4.png"
+import pImg5 from "../../assets/Home assets/portpolioImg5.jpg"
+import sImg1 from "../../assets/Home assets/sideImg1.png"
+import sImg2 from "../../assets/Home assets/sideImg2.png"
+import sImg3 from "../../assets/Home assets/sideImg3.png"
+import sImg4 from "../../assets/Home assets/sideImg4.png"
+import topMainImg from "../../assets/Home assets/topMainImg.png"
+import yogaLeftImg from "../../assets/Home assets/yogaLeftImg.png"
 
 const Home = () => {
 
@@ -10,7 +38,7 @@ const Home = () => {
       <section class={css["mainSec"]}>
         <div class={css["outerDiv"]}>
           <div class={css["innerDiv1"]}>
-            <img src="/images/topMainImg.png" alt="" />
+            <img src={topMainImg} alt="" />
           </div>
           <div class={css["innerDiv2"]}>
             <b>WELCOME TO FOSIAL</b>
@@ -24,7 +52,7 @@ const Home = () => {
             <div>
               <button class={css["btn1"]}>DISCOVER NOW</button>
               <a href="">
-                <i class={css["fas fa-play"]}></i>Watch video
+                <i class="fas fa-play"></i>Watch video
               </a>
             </div>
           </div>
@@ -34,28 +62,28 @@ const Home = () => {
       {/* second section */}
     <section class={css["lapingSection"]}>
         <div class={css["lapingDiv"]}>
-            <div><img src="/images/lapingImg1.png" alt=""/></div>
+            <div><img src={lImg1} alt=""/></div>
             <div>
                 <h2>Power Vinyasa</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
         <div class={css["lapingDiv"]}>
-            <div><img src="/images/lapingImg2.png" alt=""/></div>
+            <div><img src={lImg2} alt=""/></div>
             <div>
                 <h2>Flax Yoga</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
         <div class={css["lapingDiv"]}>
-            <div><img src="/images/lapingImg3.png" alt=""/></div>
+            <div><img src={lImg3} alt=""/></div>
             <div>
                 <h2>Relax Yoga</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
         <div class={css["lapingDiv"]}>
-            <div><img src="/images/lapingImg4.png" alt=""/></div>
+            <div><img src={lImg4} alt=""/></div>
             <div>
                 <h2>Fitness Yoga</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
@@ -66,7 +94,7 @@ const Home = () => {
     {/* Third Section */}
     <section class={css["thirdSection"]}>
       <div class={css["thirdOuter1"]}>
-        <img src="/images/yogaLeftImg.png" alt="" />
+        <img src={yogaLeftImg} alt="" />
       </div>
       <div class={css["thirdOuter2"]}>
         <h2>
@@ -111,22 +139,22 @@ const Home = () => {
       <h2>Our Fun Facts</h2>
       <div class={css["forthOuterDiv"]}>
         <div class={css["forthInnerDiv"]}>
-          <img src="/images/factImg1.png" alt="" />
+          <img src={fImg1} alt="" />
           <h4>8745</h4>
           <h5>Our Clients</h5>
         </div>
         <div class={css["forthInnerDiv"]}>
-          <img src="/images/factImg2.png" alt="" />
+          <img src={fImg2} alt="" />
           <h4>7845</h4>
           <h5>Relax Yoga Done</h5>
         </div>
         <div class={css["forthInnerDiv"]}>
-          <img src="/images/factImg3.png" alt="" />
+          <img src={fImg3} alt="" />
           <h4>6874</h4>
           <h5>Happy Clients</h5>
         </div>
         <div class={css["forthInnerDiv"]}>
-          <img src="/images/factImg4.png" alt="" />
+          <img src={fImg4} alt="" />
           <h4>5987</h4>
           <h5>Cup Of Coffee</h5>
         </div>
@@ -138,10 +166,9 @@ const Home = () => {
       <h4 class={css["carouselHeading"]}>Our Best Classes</h4>
       <div id="container">
         <div id="slider-container">
-          <span onclick="slideRight()" class={css["btn"]}></span>
           <div id="slider">
             <div class={css["slide"]}>
-              <div><img src="/images/carouselImg1.jpg" alt="" /></div>
+              <div><img src={crImg1} alt="" /></div>
               <div>
                 <h5>
                   Progressive Power <br />
@@ -154,7 +181,7 @@ const Home = () => {
               </div>
             </div>
             <div class={css["slide"]}>
-              <div><img src="/images/carouselImg2.jpg" alt="" /></div>
+              <div><img src={crImg2} alt="" /></div>
               <div>
                 <h5>
                   Mind Balance & Relax <br />
@@ -167,7 +194,7 @@ const Home = () => {
               </div>
             </div>
             <div class={css["slide"]}>
-              <div><img src="/images/carouselImg3.jpg" alt="" /></div>
+              <div><img src={crImg3} alt="" /></div>
               <div>
                 <h5>
                   Natural Beauty Relax <br />
@@ -179,34 +206,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div class={css["slide"]}>
-              <div><img src="/images/carouselImg1.jpg" alt="" /></div>
-              <div>
-                <h5>
-                  Progressive Power <br />
-                  Flow Yoga
-                </h5>
-                <p>
-                  Teger eu venenatis tellus. Nullam vehicula magna id tellus
-                  accumsan blandit. Vivamus vehicula vel lorem vel dignissim.
-                </p>
-              </div>
-            </div>
-            <div class={css["slide"]}>
-              <div><img src="/images/carouselImg2.jpg" alt="" /></div>
-              <div>
-                <h5>
-                  Mind Balance & Relax <br />
-                  Flow Yoga
-                </h5>
-                <p>
-                  Teger eu venenatis tellus. Nullam vehicula magna id tellus
-                  accumsan blandit. Vivamus vehicula vel lorem vel dignissim.
-                </p>
-              </div>
-            </div>
           </div>
-          <span onclick="slideLeft()" class={css["btn"]}></span>
         </div>
       </div>
     </section>
@@ -216,14 +216,14 @@ const Home = () => {
       <h2>Our Portfolio</h2>
       <div class={css["portfolioImgs"]}>
         <div class={css["PortfolioOuter"]}>
-          <img src="/images/portpolioImg1.png" alt="" />
+          <img src={pImg1} alt="" />
         </div>
         <div class={css["PortfolioOuter"]}>
-          <div><img src="/images/portpolioImg2.png" alt="" /></div>
-          <div><img src="/images/portpolioImg3.png" alt="" /></div>
+          <div><img src={pImg2} alt="" /></div>
+          <div><img src={pImg3} alt="" /></div>
         </div>
         <div class={css["PortfolioOuter"]}>
-          <img src="/images/portpolioImg4.png" alt="" />
+          <img src={pImg4} alt="" />
         </div>
       </div>
     </section>
@@ -332,7 +332,7 @@ const Home = () => {
     <section class={css["experts"]}>
       <div class={css["expertOuter"]}>
         <div class={css["expertInner"]}>
-          <img src="/images/expertImg1.png" alt="" />
+          <img src={eImg1} alt="" />
         </div>
         <div class={css["expertInner"]}>
           <h4>Bableo Dablo</h4>
@@ -341,7 +341,7 @@ const Home = () => {
       </div>
       <div class={css["expertOuter"]}>
         <div class={css["expertInner"]}>
-          <img src="/images/expertImg2.png" alt="" />
+          <img src={eImg2} alt="" />
         </div>
         <div class={css["expertInner"]}>
           <h4>Dawon Crisen</h4>
@@ -350,7 +350,7 @@ const Home = () => {
       </div>
       <div class={css["expertOuter"]}>
         <div class={css["expertInner"]}>
-          <img src="/images/expertImg3.png" alt="" />
+          <img src={eImg3} alt="" />
         </div>
         <div class={css["expertInner"]}>
           <h4>David Suarez</h4>
@@ -359,7 +359,7 @@ const Home = () => {
       </div>
       <div class={css["expertOuter"]}>
         <div class={css["expertInner"]}>
-          <img src="/images/expertImg4.png" alt="" />
+          <img src={eImg4} alt="" />
         </div>
         <div class={css["expertInner"]}>
           <h4>Gerard Peano</h4>
@@ -378,7 +378,7 @@ const Home = () => {
       <div class={css["clientDiv"]}>
         <div class={css["clientInfo"]}>
           <div class={css["clientImg"]}>
-            <img src="/images/clientImg1.png" alt="" />
+            <img src={cImg1} alt="" />
           </div>
           <div class={css["clientData"]}>
             <h3>Margie Dosa</h3>
@@ -397,7 +397,7 @@ const Home = () => {
       <div class={css["clientDiv"]}>
         <div class={css["clientInfo"]}>
           <div class={css["clientImg"]}>
-            <img src="/images/clientImg2.png" alt="" />
+            <img src={cImg2} alt="" />
           </div>
           <div class={css["clientData"]}>
             <h3>Margie Dosa</h3>
