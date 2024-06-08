@@ -24,18 +24,18 @@ const UserCart = () => {
       <h2 className="text-success p-2">Your Cart</h2>
 
       {cartList.map((item, index) => (
-        <div class="card m-2">
-          <div class="card-header">{item.date}</div>
-          <div class="card-body">
+        <div className="card m-2">
+          <div className="card-header">{item.date}</div>
+          <div className="card-body">
             <div className="d-flex">
               <img
                 src={userImg}
-                class={`${css["user-img-card"]} me-2`}
+                className={`${css["user-img-card"]} me-2`}
                 alt=""
               />
               <div>
-                <h5 class="card-title">{item.courseName}</h5>
-                <p class="card-text">{item.description}</p>
+                <h5 className="card-title">{item.courseName}</h5>
+                <p className="card-text">{item.description}</p>
               </div>
             </div>
           </div>

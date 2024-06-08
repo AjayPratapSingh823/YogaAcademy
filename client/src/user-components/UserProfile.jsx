@@ -21,9 +21,9 @@ const UserProfile = () => {
       <div className="m-2 border rounded">
         <h4 className="m-2 btn-outline-success btn">Update Profile Pic</h4>
         <div className="container p-4">
-          <div class="input-group mb-3 w-lg-50">
-            <input type="file" class="form-control" id="inputGroupFile02" />
-            <label class="input-group-text" for="inputGroupFile02">
+          <div className="input-group mb-3 w-lg-50">
+            <input type="file" className="form-control" id="inputGroupFile02" />
+            <label className="input-group-text" for="inputGroupFile02">
               Upload
             </label>
           </div>
