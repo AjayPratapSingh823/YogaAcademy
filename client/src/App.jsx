@@ -45,9 +45,9 @@ const App = () => {
         <Route path="/two-zero-two-four" element={<TwoZeroTwoFour />} />
         <Route path="/blogs" element={<Blogs />} />
         {/* Offering Classes */}
-        <Route path="/kids-class" element={<KidsClass />} />
-        <Route path="/group-class" element={<GroupClass />} />
-        <Route path="/private-class" element={<PrivateClass />} />
+        <Route path="/kids-className" element={<KidsClass />} />
+        <Route path="/group-className" element={<GroupClass />} />
+        <Route path="/private-className" element={<PrivateClass />} />
         <Route path="/yoga-workshops" element={<YogaWorkshops />} />
         {/* User */}
         <Route path='/user-dashboard' element={<UserDashboard />} />

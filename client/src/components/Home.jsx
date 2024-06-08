@@ -35,12 +35,12 @@ const Home = () => {
   return (
     <div>
       {/* First Section */}
-      <section class={css["mainSec"]}>
-        <div class={css["outerDiv"]}>
-          <div class={css["innerDiv1"]}>
+      <section className={css["mainSec"]}>
+        <div className={css["outerDiv"]}>
+          <div className={css["innerDiv1"]}>
             <img src={topMainImg} alt="" />
           </div>
-          <div class={css["innerDiv2"]}>
+          <div className={css["innerDiv2"]}>
             <b>WELCOME TO FOSIAL</b>
             <h1>
               Yoga Is The <br /> Best Journey <br /> To Self
@@ -50,9 +50,9 @@ const Home = () => {
               <br /> Donec id hendrerit nibh dapibus ante et commodo suscipit.
             </p>
             <div>
-              <button class={css["btn1"]}>DISCOVER NOW</button>
+              <button className={css["btn1"]}>DISCOVER NOW</button>
               <a href="">
-                <i class="fas fa-play"></i>Watch video
+                <i className="fas fa-play"></i>Watch video
               </a>
             </div>
           </div>
@@ -60,29 +60,29 @@ const Home = () => {
       </section>
 
       {/* second section */}
-    <section class={css["lapingSection"]}>
-        <div class={css["lapingDiv"]}>
+    <section className={css["lapingSection"]}>
+        <div className={css["lapingDiv"]}>
             <div><img src={lImg1} alt=""/></div>
             <div>
                 <h2>Power Vinyasa</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
-        <div class={css["lapingDiv"]}>
+        <div className={css["lapingDiv"]}>
             <div><img src={lImg2} alt=""/></div>
             <div>
                 <h2>Flax Yoga</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
-        <div class={css["lapingDiv"]}>
+        <div className={css["lapingDiv"]}>
             <div><img src={lImg3} alt=""/></div>
             <div>
                 <h2>Relax Yoga</h2>
                 <p>Integer venenatis tellu nullam vehicula magna id tellus accumsan blandit.</p>
             </div>
         </div>
-        <div class={css["lapingDiv"]}>
+        <div className={css["lapingDiv"]}>
             <div><img src={lImg4} alt=""/></div>
             <div>
                 <h2>Fitness Yoga</h2>
@@ -92,11 +92,11 @@ const Home = () => {
     </section>
 
     {/* Third Section */}
-    <section class={css["thirdSection"]}>
-      <div class={css["thirdOuter1"]}>
+    <section className={css["thirdSection"]}>
+      <div className={css["thirdOuter1"]}>
         <img src={yogaLeftImg} alt="" />
       </div>
-      <div class={css["thirdOuter2"]}>
+      <div className={css["thirdOuter2"]}>
         <h2>
           Make Balance <br />
           Body & Mind
@@ -111,7 +111,7 @@ const Home = () => {
           suscipit <br />sem, id pretium diam. Maecenas consectetur eros eget
           libero scelerisque finibus.
         </p>
-        <div class={css["thirdSecVideo"]}>
+        <div className={css["thirdSecVideo"]}>
           <div>
             <iframe
               width="560"
@@ -135,25 +135,25 @@ const Home = () => {
     </section>
 
     {/* forth Section */}
-    <section class={css["forthSec"]}>
+    <section className={css["forthSec"]}>
       <h2>Our Fun Facts</h2>
-      <div class={css["forthOuterDiv"]}>
-        <div class={css["forthInnerDiv"]}>
+      <div className={css["forthOuterDiv"]}>
+        <div className={css["forthInnerDiv"]}>
           <img src={fImg1} alt="" />
           <h4>8745</h4>
           <h5>Our Clients</h5>
         </div>
-        <div class={css["forthInnerDiv"]}>
+        <div className={css["forthInnerDiv"]}>
           <img src={fImg2} alt="" />
           <h4>7845</h4>
           <h5>Relax Yoga Done</h5>
         </div>
-        <div class={css["forthInnerDiv"]}>
+        <div className={css["forthInnerDiv"]}>
           <img src={fImg3} alt="" />
           <h4>6874</h4>
           <h5>Happy Clients</h5>
         </div>
-        <div class={css["forthInnerDiv"]}>
+        <div className={css["forthInnerDiv"]}>
           <img src={fImg4} alt="" />
           <h4>5987</h4>
           <h5>Cup Of Coffee</h5>
@@ -162,12 +162,12 @@ const Home = () => {
     </section>
 
     {/* carousel section */}
-    <section class={css["fifthSec"]}>
-      <h4 class={css["carouselHeading"]}>Our Best Classes</h4>
+    <section className={css["fifthSec"]}>
+      <h4 className={css["carouselHeading"]}>Our Best Classes</h4>
       <div id="container">
         <div id="slider-container">
           <div id="slider">
-            <div class={css["slide"]}>
+            <div className={css["slide"]}>
               <div><img src={crImg1} alt="" /></div>
               <div>
                 <h5>
@@ -180,7 +180,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div class={css["slide"]}>
+            <div className={css["slide"]}>
               <div><img src={crImg2} alt="" /></div>
               <div>
                 <h5>
@@ -193,7 +193,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div class={css["slide"]}>
+            <div className={css["slide"]}>
               <div><img src={crImg3} alt="" /></div>
               <div>
                 <h5>
@@ -212,17 +212,17 @@ const Home = () => {
     </section>
 
     {/* Our Portfolio section */}
-    <section class={css["portFolioSec"]}>
+    <section className={css["portFolioSec"]}>
       <h2>Our Portfolio</h2>
-      <div class={css["portfolioImgs"]}>
-        <div class={css["PortfolioOuter"]}>
+      <div className={css["portfolioImgs"]}>
+        <div className={css["PortfolioOuter"]}>
           <img src={pImg1} alt="" />
         </div>
-        <div class={css["PortfolioOuter"]}>
+        <div className={css["PortfolioOuter"]}>
           <div><img src={pImg2} alt="" /></div>
           <div><img src={pImg3} alt="" /></div>
         </div>
-        <div class={css["PortfolioOuter"]}>
+        <div className={css["PortfolioOuter"]}>
           <img src={pImg4} alt="" />
         </div>
       </div>
@@ -232,93 +232,93 @@ const Home = () => {
     <div style={{textAlign: "center", backgroundColor: "#f6f8fc"}} >
       <h3 style={{fontSize: "3.5rem", padding: "30px 0"}}>Choose Your Plan</h3>
     </div>
-    <section class={css["plans"]}>
-      <div class={css["planBox"]}>
-        <div class={css["planPricing"]}>
+    <section className={css["plans"]}>
+      <div className={css["planBox"]}>
+        <div className={css["planPricing"]}>
           <h3>Basic Plan</h3>
-          <b><i class="fa-solid fa-dollar-sign"></i>19.99</b>
+          <b><i className="fa-solid fa-dollar-sign"></i>19.99</b>
           <p>Per Month</p>
         </div>
-        <div class={css["planFeatures"]}>
+        <div className={css["planFeatures"]}>
           <div>
             <p>60-day chat history</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>Data security</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>100 GB cloud storage</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
-            <p>Best class design</p>
-            <i class="fa-solid fa-check"></i>
+            <p>Best className design</p>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>24/7 Support</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <button>CHOOSE PLANE</button>
         </div>
       </div>
-      <div class={css["planBox"]}>
-        <div class={css["planPricing"]}>
+      <div className={css["planBox"]}>
+        <div className={css["planPricing"]}>
           <h3>Standard Plan</h3>
-          <b><i class="fa-solid fa-dollar-sign"></i>29.99</b>
+          <b><i className="fa-solid fa-dollar-sign"></i>29.99</b>
           <p>Per Month</p>
         </div>
-        <div class={css["planFeatures"]}>
+        <div className={css["planFeatures"]}>
           <div>
             <p>60-day chat history</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>Data security</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>100 GB cloud storage</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
-            <p>Best class design</p>
-            <i class="fa-solid fa-check"></i>
+            <p>Best className design</p>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>24/7 Support</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <button>CHOOSE PLANE</button>
         </div>
       </div>
-      <div class={css["planBox"]}>
-        <div class={css["planPricing"]}>
+      <div className={css["planBox"]}>
+        <div className={css["planPricing"]}>
           <h3>Premium Plan</h3>
-          <b><i class="fa-solid fa-dollar-sign"></i>39.99</b>
+          <b><i className="fa-solid fa-dollar-sign"></i>39.99</b>
           <p>Per Month</p>
         </div>
-        <div class={css["planFeatures"]}>
+        <div className={css["planFeatures"]}>
           <div>
             <p>60-day chat history</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>Data security</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>100 GB cloud storage</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
-            <p>Best class design</p>
-            <i class="fa-solid fa-check"></i>
+            <p>Best className design</p>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div>
             <p>24/7 Support</p>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <button>CHOOSE PLANE</button>
         </div>
@@ -329,39 +329,39 @@ const Home = () => {
     <div style={{textAlign: "center"}}>
       <h3 style={{fontSize: "3.5rem", padding: "30px 0"}}>Our Expert Team</h3>
     </div>
-    <section class={css["experts"]}>
-      <div class={css["expertOuter"]}>
-        <div class={css["expertInner"]}>
+    <section className={css["experts"]}>
+      <div className={css["expertOuter"]}>
+        <div className={css["expertInner"]}>
           <img src={eImg1} alt="" />
         </div>
-        <div class={css["expertInner"]}>
+        <div className={css["expertInner"]}>
           <h4>Bableo Dablo</h4>
           <p>Yoga Teacher</p>
         </div>
       </div>
-      <div class={css["expertOuter"]}>
-        <div class={css["expertInner"]}>
+      <div className={css["expertOuter"]}>
+        <div className={css["expertInner"]}>
           <img src={eImg2} alt="" />
         </div>
-        <div class={css["expertInner"]}>
+        <div className={css["expertInner"]}>
           <h4>Dawon Crisen</h4>
           <p>Yoga Teacher</p>
         </div>
       </div>
-      <div class={css["expertOuter"]}>
-        <div class={css["expertInner"]}>
+      <div className={css["expertOuter"]}>
+        <div className={css["expertInner"]}>
           <img src={eImg3} alt="" />
         </div>
-        <div class={css["expertInner"]}>
+        <div className={css["expertInner"]}>
           <h4>David Suarez</h4>
           <p>Yoga Teacher</p>
         </div>
       </div>
-      <div class={css["expertOuter"]}>
-        <div class={css["expertInner"]}>
+      <div className={css["expertOuter"]}>
+        <div className={css["expertInner"]}>
           <img src={eImg4} alt="" />
         </div>
-        <div class={css["expertInner"]}>
+        <div className={css["expertInner"]}>
           <h4>Gerard Peano</h4>
           <p>Yoga Teacher</p>
         </div>
@@ -374,18 +374,18 @@ const Home = () => {
         What Our Clients Says
       </h3>
     </div>
-    <section class={css["client"]}>
-      <div class={css["clientDiv"]}>
-        <div class={css["clientInfo"]}>
-          <div class={css["clientImg"]}>
+    <section className={css["client"]}>
+      <div className={css["clientDiv"]}>
+        <div className={css["clientInfo"]}>
+          <div className={css["clientImg"]}>
             <img src={cImg1} alt="" />
           </div>
-          <div class={css["clientData"]}>
+          <div className={css["clientData"]}>
             <h3>Margie Dosa</h3>
             <p>Web Developer</p>
           </div>
         </div>
-        <div class={css["clientFeedback"]}>
+        <div className={css["clientFeedback"]}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cumque
             commodi vitae expedita vel repudiandae delectus dicta ad quas
@@ -394,17 +394,17 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div class={css["clientDiv"]}>
-        <div class={css["clientInfo"]}>
-          <div class={css["clientImg"]}>
+      <div className={css["clientDiv"]}>
+        <div className={css["clientInfo"]}>
+          <div className={css["clientImg"]}>
             <img src={cImg2} alt="" />
           </div>
-          <div class={css["clientData"]}>
+          <div className={css["clientData"]}>
             <h3>Margie Dosa</h3>
             <p>Web Developer</p>
           </div>
         </div>
-        <div class={css["clientFeedback"]}>
+        <div className={css["clientFeedback"]}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cumque
             commodi vitae expedita vel repudiandae delectus dicta ad quas
