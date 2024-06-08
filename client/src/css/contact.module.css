@@ -1,0 +1,131 @@
+*{
+    margin: 0%;
+}
+.contactHeader{
+    background-image: url(../../assets/Contact\ assets/contactHeadBanner.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contactOuter:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 60px 30px 60px 80px ;
+}
+.contactOuter:nth-of-type(1) h1{
+    font-size: 2.7rem;
+    color: white;
+}
+.contactOuter:nth-of-type(1) p{
+    color: white;
+    font-size: large;
+}
+.contactOuter:nth-of-type(2){
+     padding: 40px 20px 0 20px;
+     display: flex;
+     justify-content: center;
+}
+.contactOuter form{
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 5px grey;
+    border-radius: 15px;
+}
+.contactOuter h2{
+    color: rgb(219, 12, 81);
+}
+
+.sendMsg{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+/* contact Info Section */
+.contactInfo{
+    margin-top: 310px;
+    background-image: url(../../assets/Contact\ assets/contactBottomImg.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.ContactInfoLap{
+    background-color: rgba(0, 0, 0, 0.479);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cInfo{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+}
+.cInfo i{
+    font-size: 3rem;
+    margin-top: 10px;
+    color: rgb(162, 56, 101);
+}
+.cInfo h5{
+    font-size: xx-large;
+    color: rgb(162, 56, 101);
+}
+.cInfo p{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width:1024px){
+
+    .contactOuter form{
+        padding: 20px;
+        width: 300px;
+    }
+    .contactOuter form input{
+        width: 100%;
+    }
+
+
+}
+@media (max-width:768px){
+    .contactInfo{
+        margin-top: 500px;
+    }
+
+    .contactOuter form{
+        padding: 20px;
+        width: 300px;
+    }
+    .contactOuter form input{
+        width: 100%;
+    }
+
+    .contactHeader{
+        grid-template-columns: 1fr;
+    }
+    .contactOuter:nth-of-type(1){
+        padding: 50px;
+    }
+    .contactOuter:nth-of-type(1) h1{
+        font-size: 2.3rem;
+    }
+}
+@media (max-width:450px){
+    .contactInfo{
+        margin-top: 550px;
+    }
+}

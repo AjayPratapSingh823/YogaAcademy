@@ -1,6 +1,7 @@
 .footer{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 30px;
 }
 .footer a{
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 .footer-2 a{
     padding: 10px;

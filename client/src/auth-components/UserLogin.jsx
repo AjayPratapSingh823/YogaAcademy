@@ -52,7 +52,7 @@ const UserLogin = () => {
         <div className={`${css["forgot-password"]}`}>
           <a href="/forget-password">Forget password?</a>
         </div>
-        <p className={css["dont"]}>Don't have an account?</p>
+        <p className={css["dont"]}>Don’t have an account?</p>
         <div className={`${css["sign-in"]}`}>
           <a href="/user-signup">Sign up</a>
         </div>
