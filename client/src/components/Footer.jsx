@@ -3,7 +3,7 @@ import css from "../css/footer.module.css"
 
 const Footer = () => {
   return (
-    <div className={`bg-dark text-light`}>
+    <div className={`bg-dark text-light p-5`}>
         <div className={`${css["footer"]}`}>
             <a href="">Our Mission</a>
             <a href="/contact-us">Contact us</a>

@@ -50,9 +50,9 @@ const UserLogin = () => {
         </form>
         <button className={`${css["google-btn"]}`} >Login with <img src={imgGoogle} alt="google" /></button>
         <div className={`${css["forgot-password"]}`}>
-          <a href="/forgot-password">Forgot password?</a>
+          <a href="/forget-password">Forget password?</a>
         </div>
-        <p className={css["dont"]}>Dont have an account?</p>
+        <p className={css["dont"]}>Don't have an account?</p>
         <div className={`${css["sign-in"]}`}>
           <a href="/user-signup">Sign up</a>
         </div>
