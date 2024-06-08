@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import userImg from "../../assests/user.jpg";
+import userImg from "../../assets/user.jpg";
 import css from "../css/user-opt-courses.module.css";
 
 const UserCart = () => {

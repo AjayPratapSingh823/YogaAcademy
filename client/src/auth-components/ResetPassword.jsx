@@ -1,6 +1,6 @@
 
 import css from "../css/login.module.css";
-import imgYogaLogin from "../../assests/yoga-login.jpg";
+import imgYogaLogin from "../../assets/yoga-login.jpg";
 import { useState } from "react";
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
