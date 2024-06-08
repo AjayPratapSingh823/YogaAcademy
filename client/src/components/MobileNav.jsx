@@ -141,7 +141,8 @@ const MobileNav = () => {
             </li>
           </ul>
           <div>
-        <a href="/user-profile" className="btn btn-outline-success">User Profile</a>
+        <a href="/user-dashboard" className="btn btn-success">User Profile</a>
+        <a href='/group-class' className="btn btn-success m-1">Book a Class</a>
       </div>
         </div>
       </div>

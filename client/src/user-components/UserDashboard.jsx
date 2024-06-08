@@ -35,7 +35,7 @@ const UserDashboard = () => {
               <a onClick={() => setDashNum("2")} className={
                 dashNum === "2" ? "bg-white text-success" : ""
               } href="#">Your Cart</a>
-              <a href="/home">Logout</a>
+              <a href="/">Logout</a>
             </div>
           </div>
         </div>
