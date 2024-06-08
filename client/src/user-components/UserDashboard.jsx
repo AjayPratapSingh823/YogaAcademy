@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import css from "../css/user-dashboard.module.css";
 import userImg from "../../assets/user.jpg";
 import UserOptCourses from "./UserOptCourses";
