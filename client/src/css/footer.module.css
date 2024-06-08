@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: rgb(24, 203, 24);
+}
+.footer-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-2 a{
+    padding: 10px;
+}
+.footer-2 a:hover{
+    color: white;
+    border-bottom: 2px solid white;
+}
