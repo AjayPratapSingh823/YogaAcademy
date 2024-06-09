@@ -74,17 +74,17 @@ const MobileNav = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="/kids-className">
+                  <a className="dropdown-item" href="/kids-classes">
                     Kids Classes
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/group-className">
+                  <a className="dropdown-item" href="/group-classes">
                     Group Yoga Classes(Offline/Online)
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/private-className">
+                  <a className="dropdown-item" href="/private-classes">
                     Private Yoga Classes(Offline/Online)
                   </a>
                 </li>
