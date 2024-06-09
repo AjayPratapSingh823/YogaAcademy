@@ -1,19 +1,27 @@
-import { useState } from "react";
+import { useEffect} from "react";
 import css from "../css/user-profile.module.css";
-
+import axios from 'axios';
 const UserProfile = () => {
 
-  const [userDetails, setUserDetails] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-    gender: "",
-    weight: "",
-    healthCondition: "",
-    profilePic: "",
-  })
+  // const [userDetails, setUserDetails] = useState({
+  //   address: "",
+  //   gender: "",
+  //   weight: "",
+  //   healthCondition: [''],
+  //   profilePic: "",
+  // })
+  useEffect(()=>{
+    const fetchData=async()=>{
+      try{
+        const response = await axios.post('http://localhost:4000/api/get-user')
+        console.log(response);
+    }catch(err){
+      console.log(err);
+    }
+  }
+    fetchData()
+  },[]);
+ 
 
   return (
     <div className={css["user-profile"]}>
@@ -23,7 +31,7 @@ const UserProfile = () => {
         <div className="container p-4">
           <div className="input-group mb-3 w-lg-50">
             <input type="file" className="form-control" id="inputGroupFile02" />
-            <label className="input-group-text" for="inputGroupFile02">
+            <label className="input-group-text">
               Upload
             </label>
           </div>
@@ -33,11 +41,7 @@ const UserProfile = () => {
         <h4 className="m-2 btn-success btn">Basic Info</h4>
         <div className="container p-4">
           <div className="row">
-            <div className="col">First Name:</div>
-            <div className="col m-1">Column</div>
-          </div>
-          <div className="row">
-            <div className="col">Last Name:</div>
+            <div className="col">Full Name:</div>
             <div className="col m-1">Column</div>
           </div>
           <div className="row">
