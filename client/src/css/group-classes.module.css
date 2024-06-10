@@ -1,0 +1,39 @@
+main{
+    background: url(../../assets/group-classes.jpg);
+    background-position: center; 
+    background-size: cover;
+
+}
+.main-box{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    color: white;
+}
+.second-div{
+    padding: 50px 100px;
+    background-color: lightgreen;
+}
+.second-div .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.second-div img{
+    width: 400px;
+}
+.third-div{
+    text-align: center;
+    padding: 100px;
+    line-height: 3;
+}
+.third-div h1{
+    color: rgb(218, 58, 0);
+}
+.forth-div{
+    padding: 100px;
+    color: rgb(218, 58, 0);
+}
