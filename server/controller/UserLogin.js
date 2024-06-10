@@ -13,7 +13,7 @@ const UserLogin=async(req,res)=>{
         if(!passwordmatch){
             return res.status(400).send('Password does not match');
         }
-        res.status(200).send('Login successful');
+        res.status(200).send({});
    }catch(err){
        console.log(err);
    }
