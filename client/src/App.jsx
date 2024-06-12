@@ -36,6 +36,7 @@ import Footer from "./components/Footer";
 import OurMission from "./components/OurMission";
 import YogaDemoVideos from "./components/YogaDemoVideos";
 import Testimonials from "./components/Testimonials";
+import AllGroupClasses from "./components/AllGroupClasses";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
           {/* Offering Classes */}
           <Route path="/kids-classes" element={<KidsClass />} />
           <Route path="/group-classes" element={<GroupClass />} />
+          <Route path="/all-group-classes" element={<AllGroupClasses />} />
           <Route path="/private-classes" element={<PrivateClass />} />
           <Route path="/yoga-workshops" element={<YogaWorkshops />} />
           {/* User */}

@@ -1,6 +1,7 @@
 import React from "react";
 import css from "../css/group-classes.module.css";
 import grpImg2 from "../../assets/group-classes-2.jpg";
+import { Link } from "react-router-dom";
 
 const GroupClass = () => {
   return (
@@ -12,12 +13,12 @@ const GroupClass = () => {
       </main>
       <div className={css["second-div"]}>
         <div className={css["flex"]}>
-          <div>
-            <h2>
+          <div className={css["text"]}>
+            <h4>
               Good friends don't let you do cool things... alone!!! And so, all
               you will have to do is sign up for our Group Yoga Classes at AYS
               Because
-            </h2>
+            </h4>
             <ul>
               <li>It is 60 mins of Yoga</li>
               <li>It is an hour of Fun</li>
@@ -46,11 +47,11 @@ const GroupClass = () => {
         </p>
       </div>
       <div className={css["forth-div"]}>
-        <h2>Our Latest Plans</h2>
+        <h2>Our Latest Classes</h2>
         <div>
           <div class="card m-2">
             <div class="card-body">
-              <h5 class="card-title">Yoga Class</h5>
+              <h5 class="card-title">Yoga Classes</h5>
               <p class="card-text">
                 With supporting text below as a natural lead-in to additional
                 content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
@@ -65,7 +66,7 @@ const GroupClass = () => {
           </div>
           <div class="card m-2">
             <div class="card-body">
-              <h5 class="card-title">Yoga Class</h5>
+              <h5 class="card-title">Yoga Classes</h5>
               <p class="card-text">
                 With supporting text below as a natural lead-in to additional
                 content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
@@ -78,7 +79,7 @@ const GroupClass = () => {
               </a>
             </div>
           </div>
-          <button className="btn btn-dark m-2">See more....</button>
+          <Link to={"/all-group-classes"} className="btn btn-dark m-2">See more....</Link>
         </div>
       </div>
     </div>

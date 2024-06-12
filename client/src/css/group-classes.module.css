@@ -14,26 +14,53 @@ main{
 }
 .second-div{
     padding: 50px 100px;
-    background-color: lightgreen;
+    background: linear-gradient(135deg, rgb(0, 255, 0) 0%, lightgreen 50%, white);
 }
 .second-div .flex{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 100px;
+    flex-wrap: wrap;
+}
+.text{
+    width: 400px;
+    line-height: 2;
+    text-shadow: 2px 2px 2px white;
+}
+.text ul{
+    list-style:square;
+    font-size: large;
 }
 .second-div img{
     width: 400px;
 }
 .third-div{
     text-align: center;
-    padding: 100px;
-    line-height: 3;
+    padding: 50px 100px;
+    line-height: 2;
 }
 .third-div h1{
     color: rgb(218, 58, 0);
 }
 .forth-div{
-    padding: 100px;
+    padding: 50px 100px;
     color: rgb(218, 58, 0);
+}
+@media screen and (max-width: 455px) {
+    .second-div{
+        padding: 40px;
+    }
+    .text{
+        width: 250px;
+    }
+    .second-div img{
+        width: 250px;
+    }
+    .third-div{
+        padding: 20px;
+        font-size: small;
+    }
+    .forth-div{
+        padding: 10px;
+    }
 }

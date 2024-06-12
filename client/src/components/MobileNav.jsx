@@ -5,7 +5,7 @@ const MobileNav = () => {
   return (
     <nav className={`${css["d-no"]} navbar navbar-expand-lg bg-body-tertiary p-4`}>
       <div className="container">
-        <a className="text-success fw-bold navbar-brand fs-3" href="#">
+        <a className="text-success fw-bold navbar-brand fs-3" href="/">
         Yoga Academy
         </a>
         <button
@@ -141,7 +141,7 @@ const MobileNav = () => {
             </li>
           </ul>
           <div>
-        <a href="/user-dashboard" className="btn btn-success">User Profile</a>
+        <a href="/user-dashboard" className="btn btn-success m-1">User Profile</a>
         <a href='/group-className' className="btn btn-success m-1">Book a className</a>
       </div>
         </div>

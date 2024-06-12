@@ -4,7 +4,7 @@ import css from "../css/footer.module.css"
 const Footer = () => {
   return (
     <div className={`bg-dark text-light p-5`}>
-        <div className={`${css["footer"]}`}>
+        <div className={`${css["footer-1"]}`}>
             <a href="">Our Mission</a>
             <a href="/contact-us">Contact us</a>
             <a href="/faqs">Help & FAQs</a>
@@ -12,7 +12,7 @@ const Footer = () => {
             <a href="/testimonials">Testimonials</a>
         </div>
         <div className={`${css["footer"]}`}>
-            <h1 className='text-success p-5 border border-success rounded'>Yoga Academy</h1>
+            <h1 className='text-success text-center p-4 border border-success rounded'>Yoga Academy</h1>
             <div>
                 <h4>Our Classes</h4>
                 <div className={`${css["footer-2"]}`}>
