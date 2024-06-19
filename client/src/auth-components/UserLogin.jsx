@@ -23,7 +23,11 @@ const UserLogin = () => {
       e.preventDefault()
         try{
           const response = await axios.post('http://localhost:4000/api/user-login',Form);
-          console.log(response);
+          console.log(response.data.user.fullname);
+          localStorage.setItem("full Name:",response.data.user.fullname);
+          localStorage.setItem("Phone:",response.data.user.phone);
+          localStorage.setItem("Email:",response.data.user.email);
+
           console.log('login successful');
           setMessage(`Login Sucessfully`)
         }

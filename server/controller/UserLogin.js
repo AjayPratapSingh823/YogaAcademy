@@ -1,6 +1,7 @@
 const express= require('express');
 const bcrypt = require('bcrypt');
 const UserSchema=require('../models/User');
+const jwt=require('jsonwebtoken');
 const UserLogin=async(req,res)=>{
    try{
      const {email, password} =req.body;
@@ -13,10 +14,20 @@ const UserLogin=async(req,res)=>{
         if(!passwordmatch){
             return res.status(400).send('Password does not match');
         }
-        res.status(200).send({});
-   }catch(err){
-       console.log(err);
+
+
+   const token= jwt.sign({id:user._id},'your_jwt_secret',{expiresIn: '1h'});
+   res.status(200).json({
+    token,
+    user:{
+      fullname:user.fullname,
+      phone:user.phone,
+      email:user.email,
+    }
+   });
+  }catch(err){
+    return res.status(500).send('Server error');
    }
-}
+  }
 
 module.exports={UserLogin};

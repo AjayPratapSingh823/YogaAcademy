@@ -18,7 +18,7 @@ const UserSignup=async(req,res)=>{
     res.status(200).send('Registered successfully')
 }catch(err){
     console.log(err);
-    res.status(500).send('err',err);
+    // res.status(500).send('err',err);
 }
 }
 module.exports={UserSignup};
