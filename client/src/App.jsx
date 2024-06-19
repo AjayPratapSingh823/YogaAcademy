@@ -37,6 +37,8 @@ import OurMission from "./components/OurMission";
 import YogaDemoVideos from "./components/YogaDemoVideos";
 import Testimonials from "./components/Testimonials";
 import AllGroupClasses from "./components/AllGroupClasses";
+import AdminDashboard from "./admin-components/AdminDashboard";
+import AdminProfile from "./admin-components/AdminProfile";
 
 const App = () => {
   return (
@@ -62,11 +64,13 @@ const App = () => {
           <Route path="/user-payment" element={<UserPayment />} />
           <Route path="/user-profile" element={<UserProfile />} />
           {/* Admin */}
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/admin-profile" element={<AdminProfile />} />
           <Route path="/adding-classes" element={<AddingClasses />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/queries" element={<Queries />} />
-          <Route path="/trainer-info" element={<TrainerInfo />} />
-          <Route path="/user-info" element={<UserInfo />} />
+          <Route path="/trainer-data" element={<TrainerInfo />} />
+          <Route path="/user-data" element={<UserInfo />} />
           {/* Trainer */}
           <Route path="/trainer-blogs" element={<TrainerBlogs />} />
           <Route path="/trainer-profile" element={<TrainerProfile />} />
