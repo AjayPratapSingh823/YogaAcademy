@@ -1,5 +1,6 @@
 @media screen and (max-width: 455px) {
     .top-section p{
-        display: none;
+        /* display: none; */
+        font-size: x-small;
     }
 }

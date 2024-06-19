@@ -13,6 +13,12 @@
     pointer-events: none !important;
 }
 
+@media screen and (max-width: 1440px) {
+    .m-no{
+        font-size: small;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .m-no{
         display: none !important;

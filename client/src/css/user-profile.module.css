@@ -5,3 +5,8 @@
 .user-profile::-webkit-scrollbar{
     width: 0;
 }
+@media screen and (max-width: 700px) {
+    .user-profile{
+        height: unset;
+    }
+}

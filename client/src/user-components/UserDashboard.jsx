@@ -23,7 +23,7 @@ const UserDashboard = () => {
       <div className={`${css["main"]}`}>
         <div className={`${css["one"]}`}>
           <img src={userImg} className={css["user-img"]} alt="" />
-          <h2 className="text-light m-2">Welcome User!</h2>
+          <h2 className="text-light text-center m-2">Welcome User!</h2>
           <div>
             <div className={css["my-list"]}>
               <a onClick={() => setDashNum("0")} className={
