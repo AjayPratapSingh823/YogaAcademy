@@ -21,7 +21,7 @@ const Footer = () => {
                 <a href="/private-classes">Private Classes</a>
                 </div>
             </div>
-            <div className='me-5'>
+            <div className='me-lg-5'>
                 <h4>Our Address</h4>
                 <p>Office-123, First Floor, Second Building</p>
                 <p>Old Road,New City, Somewhere</p>

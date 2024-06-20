@@ -17,7 +17,7 @@ const AdminDashboard = () => {
     },
     {
       name: "Add Class",
-      link: "/adding-class",
+      link: "/adding-classes",
     },
     {
       name: "FAQs",
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
   return (
     <div>
       <nav className={css["dashboard-flex"]}>
-        {arr.map((item, index) => (
+        {arr.map((item) => (
           <div className={css["card"]}>
             <a href={item.link}>{item.name}</a>
           </div>

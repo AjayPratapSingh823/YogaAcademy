@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import css from "../css/desktopNav.module.css"
 import userImg from '../../assets/user.jpg';
 
 const DesktopNav = () => {
+
   return (
     <nav className={`${css["m-no"]} navbar navbar-expand-lg bg-body-tertiary p-4`}>
     <div className="container">
@@ -35,12 +36,12 @@ const DesktopNav = () => {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="/i-am-new-here">
+                <a className="dropdown-item" href="/i-am-new-here/#whatExp">
                   What can you expect
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="/i-am-new-here">
+                <a className="dropdown-item" href="/i-am-new-here/#about">
                   About Us
                 </a>
               </li>
