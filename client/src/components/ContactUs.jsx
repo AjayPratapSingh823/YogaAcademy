@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from "axios"
 import css from "../css/contact.module.css"
 
 const ContactUs = () => {
+
+  let [userName, setUserName] = useState("")
+  let [email, setEmail] = useState("")
+  let [phone, setPhone] = useState("")
+  let [message, setMessage] = useState("")
+
+  const submitHandler = async (e)=>{
+    try {
+      e.preventDefault();
+      const res = await axios.post("http://localhost:4000/api/contact-form",({
+        userName,
+        email,
+        phone,
+        message,
+      }))
+      alert(res.data)
+    } catch (error) {
+      alert(error)
+    }
+  }
+
   return (
     <>
     <section class={css["contactHeader"]}>
@@ -15,11 +37,11 @@ const ContactUs = () => {
     <div class={css["contactOuter"]}>
       <form action="">
         <h2>Fill up the form below</h2>
-        <input type="text" placeholder="Name" id="uname" />
-        <input type="email" placeholder="Email" id="mail" />
-        <input type="text" placeholder="Contact no." id="phone" />
-        <input type="text" placeholder="Your Message" id="feedback" />
-        <button type='submit' class={css["sendMsg"]}>Send Message</button>
+        <input type="text" onChange={(e)=>setUserName(e.target.value)} placeholder="Name" id="uname" />
+        <input type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" id="mail" />
+        <input type="text" onChange={(e)=>setPhone(e.target.value)} placeholder="Contact no." id="phone" />
+        <input type="text" onChange={(e)=>setMessage(e.target.value)} placeholder="Your Message" id="feedback" />
+        <button type='submit' class={css["sendMsg"]} onClick={submitHandler}>Send Message</button>
       </form>
     </div>
   </section>

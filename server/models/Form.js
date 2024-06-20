@@ -1,8 +1,7 @@
 const mongoose= require('mongoose');
-const FormSchema= new mongoose.model({
+const formSchema= new mongoose.Schema({
     fullname:{
         type:String,
-        required:true,
     },
     email:{
         type:String,
@@ -13,5 +12,8 @@ const FormSchema= new mongoose.model({
     message:{
         type:String,
     }
-
 })
+
+const formModel = new mongoose.model("Queries", formSchema)
+
+module.exports = {formModel}
