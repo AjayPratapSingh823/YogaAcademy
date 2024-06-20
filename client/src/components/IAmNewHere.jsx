@@ -48,7 +48,7 @@ const IAmNewHere = () => {
         </div>
     </section>
 
-    <section class={css["aboutUs"]}>
+    <section id={css["aboutUs"]}>
         <h2>About Us</h2>
         <p>Everything about Atma Yoga Shala from inception to where we are now has happened organically almost like we are just flowing with the order of the universe. Nothing about this beautiful community has been forced or made to happen and we are humbled by how naturally it has all come together.</p>
         <p>If you have ever wondered ‘who am I?’ ‘Who is the real me’? What is the purpose of this life?’ then know that real Yoga will lead you towards the answers you are looking for. Have we found them? Of course not! But we happily stumbling around on this path and we welcome you to join us !</p>
