@@ -76,6 +76,7 @@ const UserProfile = () => {
         }
       });
       console.log(response.data);
+      localStorage.setItem('Photo',response.data);
       alert("Photo uploaded successfully");
     } catch (err) {
       console.log(err);

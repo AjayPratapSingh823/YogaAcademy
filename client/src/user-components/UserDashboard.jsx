@@ -7,7 +7,8 @@ import UserCart from "./UserCart";
 
 const UserDashboard = () => {
   const [dashNum, setDashNum] = useState("0");
-
+  const [profilephoto,setprofilephoto]=useState('');
+  setprofilephoto(localStorage.getItem('photo'));
   let dashRoute = ()=>{
     if(dashNum === "0"){
       return <UserProfile />
@@ -22,7 +23,7 @@ const UserDashboard = () => {
     <div>
       <div className={`${css["main"]}`}>
         <div className={`${css["one"]}`}>
-          <img src={userImg} className={css["user-img"]} alt="" />
+          <img src={profilephoto} className={css["user-img"]} alt="" />
           <h2 className="text-light text-center m-2">Welcome User!</h2>
           <div>
             <div className={css["my-list"]}>
