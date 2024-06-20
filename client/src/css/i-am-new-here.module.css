@@ -1,0 +1,151 @@
+*{
+    margin: 0%;
+}
+
+.whatIsYoga{
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f0ebe677;
+}
+.outerDiv1{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.outerDiv1 div{
+    width: 450px;
+    height: 350px;
+    /* border: 1px solid green; */
+    border-radius: 50%;
+    background-image: url(../../assets/I\ am\ new\ here\ assets/what_is_yoga_img.jpg);
+    background-size: contain;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+}
+.outerDiv2{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+.outerDiv2 h1{
+    font-size: xx-large;
+    color: #E66129;
+}
+.outerDiv2 p{
+    margin-top: 20px;
+    font-size: x-large;
+    line-height: 1.5em;
+}
+/* What Expect */
+#whatExp{
+    text-align: center;
+    padding: 70px 0 50px 0;
+    font-size: x-large;
+    color: #E66129;
+}
+
+.whatExpect{
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+}
+/* .expBox1{
+    border: 1px solid red;
+}
+.expBox2{
+    border: 1px solid blue;
+} */
+.weInDiv{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+.weInDiv i{
+    color: #E66129;
+    margin: 20px 0;
+    font-size: xx-large;
+}
+.weInDiv h3{
+    font-size: xx-large;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #E66129;
+}
+.weInDiv p{
+    font-size: larger;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* About us CSS */
+.aboutUs{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f0ebe677;
+    padding: 50px 300px;
+}
+.aboutUs h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #E66129;
+    margin-bottom: 20px;
+}
+.aboutUs p{
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+@media (max-width:950px){
+    .outerDiv1 div{
+        width: 350px;
+        height: 250px;
+    }
+    .outerDiv2 h1{
+        font-size: x-large;
+    }
+    .outerDiv2 p{
+        margin-top: 20px;
+        font-size: larger;
+        line-height: 1.5em;
+    }
+    .aboutUs{
+        padding: 50px 100px;
+    }
+}
+@media (max-width:768px){
+    .whatIsYoga{
+        grid-template-columns: 1fr;
+    }
+    .outerDiv2{
+        text-align: center;
+    }
+    #wyReversal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .whatExpect{
+        grid-template-columns: 1fr;
+        padding: 0%;
+    }
+}
+@media (max-width:375px){
+    .outerDiv1 div{
+        width: 300px;
+        height: 200px;
+    }
+    .aboutUs{
+        padding: 50px 10px;
+    }
+}
