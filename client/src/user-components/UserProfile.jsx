@@ -75,7 +75,7 @@ const UserProfile = () => {
           'Content-Type': 'multipart/form-data'
         }
       });
-      console.log(response);
+      console.log(response.data);
       alert("Photo uploaded successfully");
     } catch (err) {
       console.log(err);

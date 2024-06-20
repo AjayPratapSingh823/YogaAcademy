@@ -7,6 +7,11 @@ const FormSchema= new mongoose.model({
     email:{
         type:String,
     },
-    
+    phone:{
+        type:String,
+    },
+    message:{
+        type:String,
+    }
 
 })
