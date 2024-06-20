@@ -34,7 +34,7 @@ const ContactUs = () => {
         of styles and approaches to suit everyone’s unique needs.
       </p>
     </div>
-    <div class={css["contactOuter"]}>
+    <div class ={css["contactOuter"]}>
       <form action="">
         <h2>Fill up the form below</h2>
         <input type="text" onChange={(e)=>setUserName(e.target.value)} placeholder="Name" id="uname" />
