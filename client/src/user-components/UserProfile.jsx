@@ -1,57 +1,86 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import css from "../css/user-profile.module.css";
 import axios from 'axios';
-const UserProfile = () => {
-  const [FullName,setFullName]=useState('');
-  const [Phone,setPhone]=useState('');
-  const [Email,setEmail]=useState('');
-  const [address,setaddress]=useState('');
-  const [finaladdress,setfinaladdress]=useState('');
-  const [finalgender,setfinalgender]=useState('');
-  const [gender,setgender]=useState('');
-  const [weight,setweight]=useState('');
-  useEffect(()=>{
-    const fetchData=async()=>{
-       setFullName(localStorage.getItem('full Name:'));
-       setPhone(localStorage.getItem('Phone:'));
-       setEmail(localStorage.getItem('Email:'));
-       setfinaladdress(localStorage.getItem('Address:'))
-       setfinalgender(localStorage.getItem('Gender:'))
-  }
-    fetchData()
-  },[finaladdress]);
 
-  const handleAddressSubmit=async()=>{
-    try{
-          const response= await axios.post('http://localhost:4000/api/address',{
-            address:address,
-            Email:Email,
-          })
-          console.log(response);
-          localStorage.setItem('Address:',address);
-    }catch(err){
+const UserProfile = () => {
+  const [FullName, setFullName] = useState('');
+  const [Phone, setPhone] = useState('');
+  const [Email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [finalAddress, setFinalAddress] = useState('');
+  const [finalGender, setFinalGender] = useState('');
+  const [gender, setGender] = useState('');
+  const [weight, setWeight] = useState('');
+  const [photo, setPhoto] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setFullName(localStorage.getItem('Full Name:'));
+      setPhone(localStorage.getItem('Phone:'));
+      setEmail(localStorage.getItem('Email:'));
+      setFinalAddress(localStorage.getItem('Address:'));
+      setFinalGender(localStorage.getItem('Gender:'));
+    };
+    fetchData();
+  }, [finalAddress]);
+
+  const handleAddressSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:4000/api/address', {
+        address: address,
+        Email: Email,
+      });
+      console.log(response);
+      localStorage.setItem('Address:', address);
+    } catch (err) {
       console.log(err);
     }
-  }
+  };
 
-  const handleAddressUpdate=async()=>{
-        localStorage.removeItem('Address:');
-        setfinaladdress('');
-  }
-  const handleGender=async()=>{
-        try{
-          const response = await axios.post('http://localhost:4000/api/gender',{
-            gender:gender,
-            Email:Email
-          })
-          console.log(response);
-          localStorage.setItem('Gender:',gender);
-        }catch(err){
-          console.log(err);
+  const handleAddressUpdate = async () => {
+    localStorage.removeItem('Address:');
+    setFinalAddress('');
+  };
+
+  const handleGender = async () => {
+    try {
+      const response = await axios.post('http://localhost:4000/api/gender', {
+        gender: gender,
+        Email: Email,
+      });
+      console.log(response);
+      localStorage.setItem('Gender:', gender);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handlePhotoChange = async (e) => {
+    const { files } = e.target;
+    setPhoto(files[0]);
+  };
+
+  const handlePhotoSubmit = async () => {
+    if (!photo) {
+      console.log("No photo selected");
+      return;
+    }
+    const formData = new FormData();
+    formData.append('photo', photo);
+    formData.append('Email', Email);
+    console.log(formData.Email);
+    try {
+      const response = await axios.post('http://localhost:4000/api/photo', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
-  }
-  
- 
+      });
+      console.log(response);
+      alert("Photo uploaded successfully");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className={css["user-profile"]}>
@@ -60,8 +89,8 @@ const UserProfile = () => {
         <h4 className="m-2 btn-success btn">Update Profile Pic</h4>
         <div className="container p-4">
           <div className="input-group mb-3 w-lg-50">
-            <input type="file" className="form-control" id="inputGroupFile02" />
-            <label className="input-group-text">
+            <input type="file" className="form-control" id="inputGroupFile02" onChange={handlePhotoChange} />
+            <label className="input-group-text" onClick={handlePhotoSubmit}>
               Upload
             </label>
           </div>
@@ -85,17 +114,17 @@ const UserProfile = () => {
           <div className="row">
             <div className="col">Address:</div>
             <div className="col">
-              {finaladdress ? <p>{finaladdress}</p>:<input
+              {finalAddress ? <p>{finalAddress}</p> : <input
                 type="text"
                 className="rounded border p-1"
                 value={address}
-                onChange={(e)=>setaddress(e.target.value)}
+                onChange={(e) => setAddress(e.target.value)}
                 placeholder="Address"
               ></input>}
-              <button className="btn btn-dark m-1" title="Save" onClick={()=>handleAddressSubmit()}>
+              <button className="btn btn-dark m-1" title="Save" onClick={() => handleAddressSubmit()}>
                 Save
               </button>
-              <button className="btn btn-success m-1" onClick={()=>handleAddressUpdate()}>
+              <button className="btn btn-success m-1" onClick={() => handleAddressUpdate()}>
                 Update
               </button>
             </div>
@@ -103,14 +132,14 @@ const UserProfile = () => {
           <div className="row">
             <div className="col">Gender:</div>
             <div className="col">
-              {finalgender ? <p>{finalgender}</p>:<input
+              {finalGender ? <p>{finalGender}</p> : <input
                 type="text"
                 className="rounded border p-1"
                 value={gender}
-                onChange={(e)=>setgender(e.target.value)}
+                onChange={(e) => setGender(e.target.value)}
                 placeholder="Gender"
               ></input>}
-              <button className="btn btn-dark m-1" title="Save" onClick={()=>handleGender()}>
+              <button className="btn btn-dark m-1" title="Save" onClick={() => handleGender()}>
                 Save
               </button>
               <button className="btn btn-success m-1">
@@ -130,7 +159,7 @@ const UserProfile = () => {
                 type="text"
                 className="rounded border p-1"
                 value={weight}
-                onChange={(e)=>setweight(e.target.value)}
+                onChange={(e) => setWeight(e.target.value)}
                 placeholder="Weight"
               ></input>
               <button className="btn btn-dark m-1" title="Save">
