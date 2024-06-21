@@ -19,7 +19,8 @@ const AddingClasses = () => {
       <h1 className="text-center bg-success text-white">All Classes</h1>
       <div className="container p-2">
         <div className="card p-2 m-2">
-          <form action="">
+          <form action="">  
+          
             <div className="input-group">
               <span className="input-group-text" id="basic-addon1">
                 Title
