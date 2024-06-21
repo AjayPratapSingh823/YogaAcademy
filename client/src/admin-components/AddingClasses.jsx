@@ -3,14 +3,16 @@ import React from "react";
 const AddingClasses = () => {
   let allClasses = [
     {
-      title: "",
-      description: "",
-      date: "",
+      title: "Something",
+      description: "loremqwewqrhfklhjkhdskahfkdshfaklshfsfhshf",
+      category: "Private",
+      date: "22-09-2024",
     },
     {
-      title: "",
-      description: "",
-      date: "",
+      title: "Something",
+      description: "loremqwewqrhfklhjkhdskahfkdshfaklshfsfhshf",
+      category: "Group",
+      date: "22-09-2024",
     },
   ];
 
@@ -64,13 +66,11 @@ const AddingClasses = () => {
         <div>
           {allClasses.map((item,index) => (
             <div className="card p-2 m-2">
-              <h2 className="text-danger">Title</h2>
+              <h2 className="text-danger">{item.title} <span className="text-success">({item.category})</span></h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi ea aut cupiditate at possimus tenetur veniam deserunt
-                eaque optio alias, provident inventore dolorum?
+                {item.description}
               </p>
-              <h4 className="text-primary">Date: 21/09/2024</h4>
+              <h4 className="text-primary">Date: {item.date}</h4>
             </div>
           ))}
         </div>
