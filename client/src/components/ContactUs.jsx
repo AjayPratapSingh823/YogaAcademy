@@ -4,7 +4,7 @@ import css from "../css/contact.module.css"
 
 const ContactUs = () => {
 
-  let [userName, setUserName] = useState("")
+  let [fullname, setFullname] = useState("")
   let [email, setEmail] = useState("")
   let [phone, setPhone] = useState("")
   let [message, setMessage] = useState("")
@@ -13,7 +13,7 @@ const ContactUs = () => {
     try {
       e.preventDefault();
       const res = await axios.post("http://localhost:4000/api/contact-form",({
-        userName,
+        fullname,
         email,
         phone,
         message,
@@ -37,7 +37,7 @@ const ContactUs = () => {
     <div class ={css["contactOuter"]}>
       <form action="">
         <h2>Fill up the form below</h2>
-        <input type="text" onChange={(e)=>setUserName(e.target.value)} placeholder="Name" id="uname" />
+        <input type="text" onChange={(e)=>setFullname(e.target.value)} placeholder="Name" id="uname" />
         <input type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" id="mail" />
         <input type="text" onChange={(e)=>setPhone(e.target.value)} placeholder="Contact no." id="phone" />
         <input type="text" onChange={(e)=>setMessage(e.target.value)} placeholder="Your Message" id="feedback" />
