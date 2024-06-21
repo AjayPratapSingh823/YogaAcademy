@@ -15,7 +15,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setFullName(localStorage.getItem('Full Name:'));
+      setFullName(localStorage.getItem('full Name:'));
       setPhone(localStorage.getItem('Phone:'));
       setEmail(localStorage.getItem('Email:'));
       setFinalAddress(localStorage.getItem('Address:'));
