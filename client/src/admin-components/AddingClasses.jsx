@@ -47,14 +47,10 @@ const AddingClasses = () => {
               <span className="input-group-text" id="basic-addon1">
                 Date
               </span>
-<<<<<<< HEAD
-              <input type="date" class="form-control" />
-=======
               <input
                 type="date"
                 className="form-control"
               />
->>>>>>> 7300aa46e50f0c8f698a683642c3a33c23c27d14
             </div>
 
             <button className="btn btn-success" type="submit">
