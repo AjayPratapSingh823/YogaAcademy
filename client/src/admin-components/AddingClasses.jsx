@@ -20,28 +20,30 @@ const AddingClasses = () => {
       <div className="container p-2">
         <div className="card p-2 m-2">
           <form action="">  
-          
+
             <div className="input-group">
               <span className="input-group-text" id="basic-addon1">
                 Title
               </span>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
 
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
+            <div className="input-group">
+              <span className="input-group-text" id="basic-addon1">
                 Category
               </span>
-              <select class="form-select" aria-label="Default select example">
+              <select className="form-select" aria-label="Default select example">
                 <option selected>--SELECT--</option>
+                <option value="Group Classes">Kids Classes</option>
                 <option value="Private Classes">Private Classes</option>
                 <option value="Group Classes">Group Classes</option>
+                <option value="Group Classes">Yoga Classes</option>
               </select>
             </div>
 
-            <div class="input-group">
-              <span class="input-group-text">Description</span>
-              <textarea class="form-control"></textarea>
+            <div className="input-group">
+              <span className="input-group-text">Description</span>
+              <textarea className="form-control"></textarea>
             </div>
 
             <div className="input-group">
