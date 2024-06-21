@@ -24,27 +24,30 @@ const AddingClasses = () => {
               <span class="input-group-text" id="basic-addon1">
                 Title
               </span>
-              <input
-                type="text"
-                class="form-control"
-              />
+              <input type="text" class="form-control" />
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">
+                Category
+              </span>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>--SELECT--</option>
+                <option value="Private Classes">Private Classes</option>
+                <option value="Group Classes">Group Classes</option>
+              </select>
             </div>
 
             <div class="input-group">
               <span class="input-group-text">Description</span>
-              <textarea
-                class="form-control"
-              ></textarea>
+              <textarea class="form-control"></textarea>
             </div>
 
             <div class="input-group">
               <span class="input-group-text" id="basic-addon1">
                 Date
               </span>
-              <input
-                type="date"
-                class="form-control"
-              />
+              <input type="date" class="form-control" />
             </div>
 
             <button className="btn btn-success" type="submit">
