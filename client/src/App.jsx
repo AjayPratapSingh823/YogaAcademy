@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense} from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import IAmNewHere from "./components/IAmNewHere";
