@@ -8,9 +8,12 @@ import UserCart from "./UserCart";
 const UserDashboard = () => {
   const [dashNum, setDashNum] = useState("0");
   const [profilephoto,setprofilephoto]=useState('');
+  const [userName,setUserName]=useState('');
   useEffect(()=>{
    const photo=localStorage.getItem('Photo');
+   const userName=localStorage.getItem('full Name:');
    console.log(photo);
+   setUserName(userName)
    setprofilephoto(photo);
   },[])
   let dashRoute = ()=>{
@@ -31,7 +34,7 @@ const UserDashboard = () => {
         <p>Loading...</p>
           }
          
-          <h2 className="text-light text-center m-2">Welcome User!</h2>
+          <h2 className="text-light text-center m-2">Welcome {userName || "User"}!</h2>
           <div>
             <div className={css["my-list"]}>
               <a onClick={() => setDashNum("0")} className={
