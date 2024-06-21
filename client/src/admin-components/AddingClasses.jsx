@@ -20,30 +20,31 @@ const AddingClasses = () => {
       <div className="container p-2">
         <div className="card p-2 m-2">
           <form action="">
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
+            <div className="input-group">
+              <span className="input-group-text" id="basic-addon1">
                 Title
               </span>
+        
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
               />
             </div>
 
-            <div class="input-group">
-              <span class="input-group-text">Description</span>
+            <div className="input-group">
+              <span className="input-group-text">Description</span>
               <textarea
-                class="form-control"
+                className="form-control"
               ></textarea>
             </div>
 
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
+            <div className="input-group">
+              <span className="input-group-text" id="basic-addon1">
                 Date
               </span>
               <input
                 type="date"
-                class="form-control"
+                className="form-control"
               />
             </div>
 
@@ -53,7 +54,7 @@ const AddingClasses = () => {
           </form>
         </div>
         <div>
-          {allClasses.map((item) => (
+          {allClasses.map((item,index) => (
             <div className="card p-2 m-2">
               <h2 className="text-danger">Title</h2>
               <p>
