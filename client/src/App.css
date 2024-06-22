@@ -21,4 +21,8 @@
   .ql-editor img.resizing {
     outline: 2px dashed #0099ff;
   }
+  /* App.css */
+.quill-editor {
+    width: 97vw; /* Adjust the height as needed */
+  }
   

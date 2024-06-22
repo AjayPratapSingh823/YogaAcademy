@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../App.css'; // Ensure custom CSS is imported
-import axios from 'axios';
+import axios from 'axios'
 
 const Blog = () => {
   const [editorContent, setEditorContent] = useState('');
@@ -135,6 +135,7 @@ const Blog = () => {
         modules={modules}
         formats={formats}
         theme="snow"
+        className="quill-editor" 
       />
 
 <div className="text-center m-2">
