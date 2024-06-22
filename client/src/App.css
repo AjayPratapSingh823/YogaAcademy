@@ -1,0 +1,24 @@
+/* App.css */
+.ql-editor img {
+    max-width: 100%;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .ql-editor img[data-resizable]::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+  }
+  
+  .ql-editor img.resizing {
+    outline: 2px dashed #0099ff;
+  }
+  
