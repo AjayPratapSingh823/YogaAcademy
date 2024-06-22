@@ -73,6 +73,34 @@ const Blog = () => {
 
   return (
     <div>
+      <form action="" className='m-2 p-2 border rounded'>  
+
+<div className="input-group">
+  <span className="input-group-text" id="basic-addon1">
+    Title
+  </span>
+  <input type="text" className="form-control" />
+</div>
+
+<div className="input-group">
+  <span className="input-group-text">Description</span>
+  <textarea className="form-control"></textarea>
+</div>
+
+<div className="input-group">
+  <span className="input-group-text" id="basic-addon1">
+    Date
+  </span>
+  <input
+    type="date"
+    className="form-control"
+  />
+</div>
+
+<button className="btn btn-dark" type="submit">
+  Post <i className='fa-solid fa-paper-plane'></i>
+</button>
+</form>
       <ReactQuill 
         ref={quillRef}
         value={editorContent}

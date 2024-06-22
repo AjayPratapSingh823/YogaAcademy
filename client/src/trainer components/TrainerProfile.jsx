@@ -12,6 +12,29 @@ const TrainerProfile = () => {
       <h2 className="p-2">
         Name <span class="badge text-bg-primary">Trainer</span>
       </h2>
+
+{/* Modal Button */}
+<button type="button" class="m-2 btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Open Blogs Section
+</button>
+
+{/* Modal Section */}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Blogs Section</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <a href="/blogs" class="btn btn-dark">All Blogs</a>
+        <a href="/create-blog" class="btn btn-success">Create a Blog</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       <div className="m-2 p-2 border rounded">
         <h4 className="btn-success btn">Change Profile Picture</h4>
         <div className="input-group">
