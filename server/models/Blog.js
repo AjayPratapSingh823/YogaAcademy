@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const BlogSchmea=new mongoose.Schema({
+const Blog=new mongoose.Schema({
     title:{
         type:String,
         required:true,
     },
-    category:{
+    desc:{
         type:String,
         required:true,
     },
@@ -25,3 +25,5 @@ const BlogSchmea=new mongoose.Schema({
         required:false,
     }]
 })
+const BlogSchema=new mongoose.model('Blog',BlogSchema);
+module.exports=BlogSchema;

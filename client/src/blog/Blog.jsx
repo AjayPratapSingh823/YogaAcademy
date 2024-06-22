@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import '../App.css'; // Ensure custom CSS is imported
+import axios from 'axios';
 
 const Blog = () => {
   const [editorContent, setEditorContent] = useState('');
@@ -53,6 +54,33 @@ const Blog = () => {
     };
   }, []);
 
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    const title=e.target.title.value;
+    const desc=e.target.desc.value;
+    const date=e.target.date.value;
+    const content=editorContent;
+    const formData = new FormData();
+    formData.append('title',title);
+    formData.append('desc',desc);
+    formData.append('data',date);
+    formData.append('content',content);
+
+
+    const parser= new DOMParser();
+    const doc= parser.parseFromString(content,'text/html');
+    const images=doc.querySelectorAll('img');
+    for(const img of images){
+        const imageUrl=img.src;
+        const imageBlob=await fetch(imageUrl).then(res=>res.blob());
+        formData.append('images',imageBlob,'image.png');
+    }
+    await axios.post('/blogs',formData,{
+        headers:{'Content-Type':'multipart/form-data'},
+    })
+  }
+
   const modules = {
     toolbar: [
       [{ 'header': '1'}, { 'header': '2'}, { 'font': [] }],
@@ -73,18 +101,18 @@ const Blog = () => {
 
   return (
     <div>
-      <form action="" className='m-2 p-2 border rounded'>  
+      <form action="" onSubmit={handleSubmit} className='m-2 p-2 border rounded'>  
 
 <div className="input-group">
   <span className="input-group-text" id="basic-addon1">
     Title
   </span>
-  <input type="text" className="form-control" />
+  <input type="text" className="form-control" name="title" />
 </div>
 
 <div className="input-group">
   <span className="input-group-text">Description</span>
-  <textarea className="form-control"></textarea>
+  <textarea className="form-control" name="desc"></textarea>
 </div>
 
 <div className="input-group">
@@ -94,13 +122,12 @@ const Blog = () => {
   <input
     type="date"
     className="form-control"
+    name="date"
   />
 </div>
 
-<button className="btn btn-dark" type="submit">
-  Post <i className='fa-solid fa-paper-plane'></i>
-</button>
-</form>
+
+
       <ReactQuill 
         ref={quillRef}
         value={editorContent}
@@ -109,6 +136,13 @@ const Blog = () => {
         formats={formats}
         theme="snow"
       />
+
+<div className="text-center m-2">
+<button className="btn btn-dark" type="submit">
+  Post <i className='fa-solid fa-paper-plane'></i>
+</button>
+</div>
+</form>
     </div>
   );
 };
