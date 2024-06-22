@@ -39,6 +39,7 @@ import Testimonials from "./components/Testimonials";
 import AllGroupClasses from "./components/AllGroupClasses";
 import AdminDashboard from "./admin-components/AdminDashboard";
 import AdminProfile from "./admin-components/AdminProfile";
+import Blog from "./blog/Blog";
 
 const App = () => {
   return (
@@ -90,6 +91,7 @@ const App = () => {
           <Route path="/our-mission" element={<OurMission />} />
           <Route path="/yoga-demo-videos" element={<YogaDemoVideos />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/create-blog" element={<Blog />} />
         </Routes>
         <Footer />
       </BrowserRouter>
