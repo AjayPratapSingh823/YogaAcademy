@@ -9,6 +9,7 @@ const AdminProfile = () => {
           <img src="" alt="" />
         </div>
       </div>
+      <h2 className='p-2'>Name <span class="badge text-bg-warning">Admin</span></h2>
       <div className='m-2 p-2 border rounded'>
         <h4 className="btn-success btn">Change Profile Picture</h4>
       <div className="input-group">

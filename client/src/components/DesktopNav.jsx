@@ -46,7 +46,7 @@ const DesktopNav = () => {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="/i-am-new-here">
+                <a className="dropdown-item" href="/all-trainers">
                   Trainers
                 </a>
               </li>

@@ -39,6 +39,7 @@ import Testimonials from "./components/Testimonials";
 import AllGroupClasses from "./components/AllGroupClasses";
 import AdminDashboard from "./admin-components/AdminDashboard";
 import AdminProfile from "./admin-components/AdminProfile";
+import AllTrainers from "./components/AllTrainers";
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/i-am-new-here" element={<IAmNewHere />} />
+          <Route path="/all-trainers" element={<AllTrainers />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/two-zero-two-four" element={<TwoZeroTwoFour />} />
           <Route path="/blogs" element={<Blogs />} />
