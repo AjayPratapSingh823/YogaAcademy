@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Blog = () => {
   const [editorContent, setEditorContent] = useState("");
+  const [coverImage, setCoverImage] = useState(null);
   const quillRef = useRef(null);
 
   useEffect(() => {
@@ -54,6 +55,10 @@ const Blog = () => {
     };
   }, []);
 
+  const handleCoverImage = (e) => {
+    setCoverImage(e.target.files[0]);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target.title.value;
@@ -63,8 +68,12 @@ const Blog = () => {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("desc", desc);
-    formData.append("data", date);
+    formData.append("date", date);
     formData.append("content", content);
+
+    if (coverImage) {
+      formData.append("coverImage", coverImage);
+    }
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(content, "text/html");
@@ -74,9 +83,15 @@ const Blog = () => {
       const imageBlob = await fetch(imageUrl).then((res) => res.blob());
       formData.append("images", imageBlob, "image.png");
     }
-    await axios.post("/blogs", formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+
+    try {
+      const response=await axios.post("http://localhost:4000/api/blog", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log(response);
+    } catch (error) {
+      console.error("There was an error posting the blog:", error);
+    }
   };
 
   const modules = {
@@ -105,11 +120,7 @@ const Blog = () => {
 
   return (
     <div>
-      <form
-        action=""
-        onSubmit={handleSubmit}
-        className="m-2 p-2 border rounded"
-      >
+      <form onSubmit={handleSubmit} className="m-2 p-2 border rounded">
         <div className="input-group">
           <span className="input-group-text" id="basic-addon1">
             Title
@@ -118,8 +129,13 @@ const Blog = () => {
         </div>
 
         <div className="input-group">
-          <input type="file" className="form-control" id="inputGroupFile02" />
-          <label className="input-group-text">Upload</label>
+          <input
+            type="file"
+            className="form-control"
+            name="coverImage"
+            onChange={handleCoverImage}
+            id="inputGroupFile02"
+          />
         </div>
 
         <div className="input-group">
