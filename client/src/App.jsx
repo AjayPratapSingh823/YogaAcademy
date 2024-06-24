@@ -11,7 +11,6 @@ import Blogs from "./components/Blogs";
 import KidsClass from "./components/KidsClass";
 import GroupClass from "./components/GroupClass";
 import PrivateClass from "./components/PrivateClass";
-import YogaWorkshops from "./components/YogaWorkshops";
 // User
 import UserCart from "./user-components/UserCart";
 import UserOptCourses from "./user-components/UserOptCourses";
@@ -41,6 +40,7 @@ import AdminDashboard from "./admin-components/AdminDashboard";
 import AdminProfile from "./admin-components/AdminProfile";
 import AllTrainers from "./components/AllTrainers";
 import Blog from "./blog/Blog";
+import BecomeATrainer from "./components/BecomeATrainer";
 
 const App = () => {
   return (
@@ -51,6 +51,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/i-am-new-here" element={<IAmNewHere />} />
           <Route path="/all-trainers" element={<AllTrainers />} />
+          <Route path="/become-a-trainer" element={<BecomeATrainer />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/two-zero-two-four" element={<TwoZeroTwoFour />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -59,7 +60,6 @@ const App = () => {
           <Route path="/group-classes" element={<GroupClass />} />
           <Route path="/all-group-classes" element={<AllGroupClasses />} />
           <Route path="/private-classes" element={<PrivateClass />} />
-          <Route path="/yoga-workshops" element={<YogaWorkshops />} />
           {/* User */}
           <Route path="/user-dashboard" element={<UserDashboard />} />
           <Route path="/user-cart" element={<UserCart />} />

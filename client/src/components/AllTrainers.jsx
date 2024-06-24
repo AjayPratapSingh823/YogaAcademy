@@ -41,21 +41,21 @@ const AllTrainers = () => {
   return (
     <div>
       <h1 className="text-center text-light bg-success">All Trainers</h1>
-      <button className="btn btn-outline-success m-2">Become a Trainer</button>
+      <a href="/become-a-trainer" className="btn btn-outline-success m-2">Become a Trainer</a>
       <div className="container d-flex flex-wrap justify-content-between p-2">
 
         {
-            arr.map((item)=>(
-                <div class="card" style={{ width: "300px" }}>
+            arr.map((item, index)=>(
+                <div class="card" key={index} style={{ width: "300px" }}>
           <img
-            src={userImg}
+            src={item.img}
             class="card-img-top"
             alt="..."
             style={{ width: "100%", height: "300px" }}
           />
           <div class="card-body">
             <h5 class="card-title text-center bg-dark text-light">
-              John Doe
+               {item.name}
             </h5>
           </div>
         </div>

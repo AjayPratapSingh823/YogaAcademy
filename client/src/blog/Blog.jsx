@@ -61,7 +61,7 @@ const Blog = () => {
     const date = e.target.date.value;
     const content = editorContent;
     const formData = new FormData();
-    formData.append("title", title);
+    formData.append("title", title); 
     formData.append("desc", desc);
     formData.append("data", date);
     formData.append("content", content);
