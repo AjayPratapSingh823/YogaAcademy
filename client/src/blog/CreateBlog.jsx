@@ -4,7 +4,7 @@ import "react-quill/dist/quill.snow.css";
 import "../App.css"; // Ensure custom CSS is imported
 import axios from "axios";
 
-const Blog = () => {
+const CreateBlog = () => {
   const [editorContent, setEditorContent] = useState("");
   const [coverImage, setCoverImage] = useState(null);
   const quillRef = useRef(null);
@@ -170,4 +170,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default CreateBlog;
