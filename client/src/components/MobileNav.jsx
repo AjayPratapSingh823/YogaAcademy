@@ -88,11 +88,6 @@ const MobileNav = () => {
                     Private Yoga Classes(Offline/Online)
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="/yoga-workshops">
-                    Yoga Workshop
-                  </a>
-                </li>
               </ul>
             </li>
             {/* Calender */}
