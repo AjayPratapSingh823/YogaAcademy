@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"))
 app.use('/middleware/uploads', express.static(path.join(__dirname, 'middleware', 'uploads')));
-app.use('/middleware/blogs', express.static(path.join(__dirname, 'middleware', 'blogs')));
+app.use('/middleware/blog', express.static(path.join(__dirname, 'middleware', 'blog')));
 connection();
 app.use('/api',UserRoutes)
 app.use('/api',BlogRoutes)

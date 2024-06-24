@@ -27,7 +27,7 @@ const BlogController = async (req, res) => {
 
     try {
         await newBlog.save();
-        res.status(200).send('Blog post created successfully');
+        res.status(200).send(newBlog);
     } catch (err) {
         res.status(400).send('Blog post failed');
     }
