@@ -8,7 +8,7 @@ const Queries = () => {
       phone: 1234567890,
       message:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rerum placeat corrupti tenetur! Corporis dignissimos, quis illum placeat recusandae optio ipsam! Animi distinctio, velit, hic, est ad perspiciatis optio laboriosam aut placeat fugiat minus impedit neque fuga autem necessitatibus praum, ad",
-    },
+     },
     {
       fullname: "Shinchan Nohara",
       email: "shinchan@nohara.com",
