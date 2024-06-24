@@ -41,6 +41,7 @@ import AdminProfile from "./admin-components/AdminProfile";
 import AllTrainers from "./components/AllTrainers";
 import CreateBlog from "./blog/CreateBlog";
 import BecomeATrainer from "./components/BecomeATrainer";
+import BlogPage from "./components/BlogPage";
 
 const App = () => {
   return (
@@ -55,6 +56,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/two-zero-two-four" element={<TwoZeroTwoFour />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogpage" element={<BlogPage />} />
           {/* Offering Classes */}
           <Route path="/kids-classes" element={<KidsClass />} />
           <Route path="/group-classes" element={<GroupClass />} />
