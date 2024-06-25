@@ -4,9 +4,10 @@ const path = require('path');
 const app=express();
 require('dotenv').config();
 const connection = require('./db');
-const BlogRoutes=require('./routes/BlogRoutes');
-const PORT=process.env.PORT
 const UserRoutes=require('./routes/UserRoutes')
+const BlogRoutes=require('./routes/BlogRoutes');
+const AdminRoutes = require("./routes/AdminRoutes")
+const PORT=process.env.PORT
 
 
 app.use(cors());
@@ -17,6 +18,7 @@ app.use('/middleware/blog', express.static(path.join(__dirname, 'middleware', 'b
 connection();
 app.use('/api',UserRoutes)
 app.use('/api',BlogRoutes)
+app.use('/api',AdminRoutes)
 
 
 app.listen(PORT,()=>{

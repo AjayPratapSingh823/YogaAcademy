@@ -10,25 +10,25 @@ const TrainerProfile = () => {
         </div>
       </div>
       <h2 className="p-2">
-        Name <span class="badge text-bg-primary">Trainer</span>
+        Name <span className="badge text-bg-primary">Trainer</span>
       </h2>
 
 {/* Modal Button */}
-<button type="button" class="m-2 btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" className="m-2 btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Open Blogs Section
 </button>
 
 {/* Modal Section */}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Blogs Section</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h1 className="modal-title fs-5" id="exampleModalLabel">Blogs Section</h1>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-footer">
-        <a href="/blogs" class="btn btn-dark">All Blogs</a>
-        <a href="/create-blog" class="btn btn-success">Create a Blog</a>
+      <div className="modal-footer">
+        <a href="/blogs" className="btn btn-dark">All Blogs</a>
+        <a href="/create-blog" className="btn btn-success">Create a Blog</a>
       </div>
     </div>
   </div>

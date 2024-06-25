@@ -4,11 +4,11 @@ import css from "../css/i-am-new-here.module.css"
 const IAmNewHere = () => {
   return (
     <div>
-          <section class={css["whatIsYoga"]}>
-        <div class={css["outerDiv1"]}>
+          <section className={css["whatIsYoga"]}>
+        <div className={css["outerDiv1"]}>
             <div></div>
         </div>
-        <div class={css["outerDiv2"]}>
+        <div className={css["outerDiv2"]}>
             <h1>WHAT IS YOGA ?</h1>
             <p>"Yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India and aim to control and still the mind, recognizing a detached witness-consciousness untouched by the mind and mundane suffering."</p>
         </div>
@@ -16,32 +16,32 @@ const IAmNewHere = () => {
 
 
     <div id={css["whatExp"]}><h2>What Can You Expect ?</h2></div>
-    <section class={css["whatExpect"]}>
-        <div class={css["expBox1"]}>
-            <div class={css["weInDiv"]}>
-                <i class="fa-solid fa-certificate"></i>
+    <section className={css["whatExpect"]}>
+        <div className={css["expBox1"]}>
+            <div className={css["weInDiv"]}>
+                <i className="fa-solid fa-certificate"></i>
                 <h3>Our Teachers Are Formally Certified</h3>
                 <p>A Registered Yoga Teacher is a distinction given to Yoga teachers certified by Yoga Alliance.</p>
             </div>
-            <div class={css["weInDiv"]}>
-                <i class="fa-regular fa-heart"></i>
+            <div className={css["weInDiv"]}>
+                <i className="fa-regular fa-heart"></i>
                 <h3>Entire Team Is Light Hearted</h3>
                 <p>As serious as we are about Yoga, the fun quotient in this team is definitely high. The entire team is light hearted, enjoys Yoga and enjoys making Yoga fun for you. So you are in for some silly jokes and goofing around for sure.</p>
             </div>
-            <div class={css["weInDiv"]}>
-                <i class="fa-solid fa-hand-sparkles"></i>
+            <div className={css["weInDiv"]}>
+                <i className="fa-solid fa-hand-sparkles"></i>
                 <h3>Natural Light, Comfortable Space & Hygienic</h3>
                 <p>Every aspect of the studio space has been thought through and carefully put together by us. We wanted the space to give you a sense of calm and grounding for your practice and we are happy to say that is exactly what it does. Flooded by natural light AYS is a cozy, comfortable space that is clean, hygienic and well equipped.</p>
             </div>
         </div>
-        <div class={css["expBox2"]}>
-            <div class={css["weInDiv"]}>
-                <i class="fa-solid fa-clock"></i>
+        <div className={css["expBox2"]}>
+            <div className={css["weInDiv"]}>
+                <i className="fa-solid fa-clock"></i>
                 <h3>Attend The Class Of Your Choice</h3>
-                <p>There will always be something that seems more important than practice! Yeah, been there done that ! So, we have multiple classes through the day, both online and offline and personal classes are scheduled to your convenience, so you do not have to compromise on your practice! Basically you don’t have an excuse now ! You can attend the class of your choice at the studio or online and even two classes a day if you are the enthu type lol!</p>
+                <p>There will always be something that seems more important than practice! Yeah, been there done that ! So, we have multiple classes through the day, both online and offline and personal classes are scheduled to your convenience, so you do not have to compromise on your practice! Basically you don’t have an excuse now ! You can attend the className of your choice at the studio or online and even two classes a day if you are the enthu type lol!</p>
             </div>
-            <div class={css["weInDiv"]}>
-                <i class="fa-solid fa-hand-holding-dollar"></i>
+            <div className={css["weInDiv"]}>
+                <i className="fa-solid fa-hand-holding-dollar"></i>
                 <h3>Extremely Affordable Prices</h3>
                 <p>Last one but the most important – Our prices! We are extremely affordable for the expertise and flexibility we offer. This is a cliché but , you will pay the same for both- one meal at a restaurant and 1 month of unlimited yoga classes. If that still doesn’t work for you, you still get to practice and be part of the community through our short and long term programs and workshops.</p>
             </div>

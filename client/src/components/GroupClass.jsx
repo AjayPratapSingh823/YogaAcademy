@@ -49,32 +49,32 @@ const GroupClass = () => {
       <div className={css["forth-div"]}>
         <h2>Our Latest Classes</h2>
         <div>
-          <div class="card m-2">
-            <div class="card-body">
-              <h5 class="card-title">Yoga Classes</h5>
-              <p class="card-text">
+          <div className="card m-2">
+            <div className="card-body">
+              <h5 className="card-title">Yoga Classes</h5>
+              <p className="card-text">
                 With supporting text below as a natural lead-in to additional
                 content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
               </p>
-              <a href="#" class="btn btn-success m-2">
+              <a href="#" className="btn btn-success m-2">
                 Buy Class
               </a>
-              <a href="#" class="btn btn-outline-dark">
+              <a href="#" className="btn btn-outline-dark">
                 Add to Cart
               </a>
             </div>
           </div>
-          <div class="card m-2">
-            <div class="card-body">
-              <h5 class="card-title">Yoga Classes</h5>
-              <p class="card-text">
+          <div className="card m-2">
+            <div className="card-body">
+              <h5 className="card-title">Yoga Classes</h5>
+              <p className="card-text">
                 With supporting text below as a natural lead-in to additional
                 content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
               </p>
-              <a href="#" class="btn btn-success m-2">
+              <a href="#" className="btn btn-success m-2">
                 Buy Class
               </a>
-              <a href="#" class="btn btn-outline-dark">
+              <a href="#" className="btn btn-outline-dark">
                 Add to Cart
               </a>
             </div>
