@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={`bg-dark text-light p-5`}>
         <div className={`${css["footer-1"]}`}>
-            <a href="">Our Mission</a>
+            <a href="/i-am-new-here">About</a>
             <a href="/contact-us">Contact us</a>
             <a href="/faqs">Help & FAQs</a>
             <a href="/yoga-demo-videos">Yoga Demo Videos</a>

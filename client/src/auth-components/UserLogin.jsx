@@ -4,7 +4,6 @@ import axios from 'axios'
 import imgYogaLogin from "../../assets/yoga-login.jpg";
 import imgGoogle from "../../assets/Google.png"
 
-// {`${css[]}`}
 
 const UserLogin = () => {
     const [Form, setForm]=useState({

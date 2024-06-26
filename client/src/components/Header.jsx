@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import css from "../css/header.module.css";
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(()=>{
+  localStorage.length === 0 ? setIsLoggedIn(false) : setIsLoggedIn(true) 
+  }, [])
 
   return (
     <header className="sticky-top">

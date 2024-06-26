@@ -1,17 +1,16 @@
 import React from "react";
 import css from "../css/group-classes.module.css";
-import grpImg2 from "../../assets/group-classes-2.jpg";
-import { Link } from "react-router-dom";
+import yogaTemp from "../../assets/yoga-temp.jpg";
 
 const GroupClass = () => {
   return (
     <div>
-      <main>
+      <main className={css["group-bg"]}>
         <div className={css["main-box"]}>
           <h1>Group Yoga Classes</h1>
         </div>
       </main>
-      <div className={css["second-div"]}>
+      <div className={css["second-div"]} style={{background: "linear-gradient(135deg, rgb(0, 255, 0) 0%, lightgreen 50%, white)"}}>
         <div className={css["flex"]}>
           <div className={css["text"]}>
             <h4>
@@ -25,7 +24,7 @@ const GroupClass = () => {
               <li>It is a group of people who Love Yoga</li>
             </ul>
           </div>
-          <img src={grpImg2} alt="" />
+          <img src={yogaTemp} alt="" />
         </div>
       </div>
       <div className={css["third-div"]}>
@@ -79,7 +78,7 @@ const GroupClass = () => {
               </a>
             </div>
           </div>
-          <Link to={"/all-group-classes"} className="btn btn-dark m-2">See more....</Link>
+          <a href="/all-group-classes" className="btn btn-dark m-2">See more....</a>
         </div>
       </div>
     </div>

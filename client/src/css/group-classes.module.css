@@ -1,8 +1,17 @@
-main{
+.group-bg{
     background: url(../../assets/group-classes.jpg);
     background-position: center; 
     background-size: cover;
-
+}
+.kids-bg{
+    background: url(../../assets/kids-classes.jpg);
+    background-position: center; 
+    background-size: cover;
+}
+.private-bg{
+    background: url(../../assets/private-classes.jpeg);
+    background-position: center; 
+    background-size: cover;
 }
 .main-box{
     background-color: rgba(0, 0, 0, 0.5);
@@ -14,7 +23,9 @@ main{
 }
 .second-div{
     padding: 50px 100px;
-    background: linear-gradient(135deg, rgb(0, 255, 0) 0%, lightgreen 50%, white);
+}
+.second-div-pc{
+    background: linear-gradient(135deg, rgb(97, 97, 97) 0%, rgb(191, 191, 191) 50%, white);
 }
 .second-div .flex{
     display: flex;
