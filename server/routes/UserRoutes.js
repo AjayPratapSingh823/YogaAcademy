@@ -10,6 +10,7 @@ const {address}=require('../controller/AddressController.js');
 const {gender}=require('../controller/GenderController.js');
 const { photo } = require('../controller/photoController.js');
 const { handleContact } = require('../controller/handleContact.js');
+const { handleFAQs, handleFetchFAQs } = require('../controller/handleFAQs.js');
 
 router.post("/user-signup",UserSignup);
 router.post('/forget-password',ForgetPassword);
@@ -19,5 +20,7 @@ router.post('/address',address)
 router.post('/gender',gender)
 router.post('/photo',upload.single('photo'),photo);
 router.post("/contact-form", handleContact)
+router.post("/faqs",handleFAQs)
+router.get("/fetch-faqs",handleFetchFAQs)
 
 module.exports = router;
