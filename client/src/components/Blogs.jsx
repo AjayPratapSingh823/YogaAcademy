@@ -37,7 +37,7 @@ const Blogs = () => {
                                 <p>{blog.date}</p>
                                 <p>{blog.desc}</p>
                             </div>
-                            <a href="/blog-page">Read more....</a>
+                            <a href="/blog-page" className="btn btn-success">Read more....</a>
                         </div>
                     ))}
                 </section>
