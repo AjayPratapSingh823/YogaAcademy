@@ -4,7 +4,6 @@ import axios from 'axios'
 import imgYogaLogin from "../../assets/yoga-login.jpg";
 import imgGoogle from "../../assets/Google.png"
 
-// {`${css[]}`}
 
 const UserLogin = () => {
     const [Form, setForm]=useState({
@@ -53,6 +52,8 @@ const UserLogin = () => {
           <button type="submit">Login</button>
         </form>
         <button className={`${css["google-btn"]}`} >Login with <img src={imgGoogle} alt="google" /></button>
+        <a href="/admin-login" className={`${css["admin-btn"]}`} >Login as Admin </a>
+
         <div className={`${css["forgot-password"]}`}>
           <a href="/forget-password">Forget password?</a>
         </div>

@@ -16,16 +16,24 @@ const AdminDashboard = () => {
       link: "/trainer-data",
     },
     {
+      name: "Add Trainer",
+      link: "/add-trainer",
+    },
+    {
       name: "Add Class",
       link: "/adding-classes",
     },
     {
-      name: "FAQs",
-      link: "/faqs",
+      name: "Create a Blog",
+      link: "/create-blog",
     },
     {
       name: "Queries",
       link: "/queries",
+    },
+    {
+      name: "FAQs",
+      link: "/faqs",
     },
   ];
   return (

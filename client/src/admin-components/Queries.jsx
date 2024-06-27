@@ -1,41 +1,29 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Queries = () => {
-  let arr = [
-    {
-      fullname: "Shinchan Nohara",
-      email: "shinchan@nohara.com",
-      phone: 1234567890,
-      message:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rerum placeat corrupti tenetur! Corporis dignissimos, quis illum placeat recusandae optio ipsam! Animi distinctio, velit, hic, est ad perspiciatis optio laboriosam aut placeat fugiat minus impedit neque fuga autem necessitatibus praum, ad",
-     },
-    {
-      fullname: "Shinchan Nohara",
-      email: "shinchan@nohara.com",
-      phone: 1234567890,
-      message:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rerum placeat corrupti tenetur! Corporis dignissimos, quis illum placeat recusandasentium voluptatum? Itaque perferendis illum officia excepturi natus aperiam numquam maxime vel in quos nisi adipisci reprehenderit laudantium laborum, ad",
-    },
-    {
-      fullname: "Shinchan Nohara",
-      email: "shinchan@nohara.com",
-      phone: 1234567890,
-      message: "Lorem ipsum, dm, ad",
-    },
-    {
-      fullname: "Shinchan Nohara",
-      email: "shinchan@nohara.com",
-      phone: 1234567890,
-      message:
-        "Lorem Itaque perferendis illum officia excepturi natus aperiam numquam maxime vel in quos nisi adipisci reprehenderit laudantium laborum, ad",
-    },
-  ];
+
+  const[queries, setQueries] = useState([])
+
+  useEffect(()=>{
+    const fetchQueries = async ()=>{
+      try {
+        const res = await axios.get("http://localhost:4000/api/fetch-queries")
+        setQueries(res.data)
+        console.log(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchQueries()
+  },[])
+
 
   return (
     <div>
       <h1 className="bg-success text-center text-white">All Queries</h1>
 <div className="table-responsive">
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -46,8 +34,8 @@ const Queries = () => {
           </tr>
         </thead>
         <tbody>
-          {arr.map((item, index) => (
-            <tr>
+          {queries.map((item, index) => (
+            <tr key={item._id}>
               <th scope="row">{index + 1}</th>
               <td>{item.fullname}</td>
               <td>{item.email}</td>

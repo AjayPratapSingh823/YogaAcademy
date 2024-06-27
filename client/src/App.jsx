@@ -25,6 +25,7 @@ import UserInfo from "./admin-components/UserInfo";
 // Trainer
 import TrainerBlogs from "./trainer components/TrainerBlogs";
 import TrainerProfile from "./trainer components/TrainerProfile";
+import AdminLogin from "./auth-components/AdminLogin";
 // Auth
 const UserLogin = React.lazy(() => import("./auth-components/UserLogin"));
 import UserSignup from "./auth-components/UserSignup";
@@ -91,6 +92,7 @@ const App = () => {
           <Route path="/user-signup" element={<UserSignup />} />
           <Route path="/forget-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
           {/* Footer */}
           <Route path="/our-mission" element={<OurMission />} />
           <Route path="/yoga-demo-videos" element={<YogaDemoVideos />} />

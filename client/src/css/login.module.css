@@ -37,7 +37,7 @@ form button{
 .google-btn{
     border: 1px solid gold;
     padding: 5px 25px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 15px;
     background-color: white;
 }
@@ -45,8 +45,21 @@ form button{
     background-color: gold;
 }
 .google-btn img{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+}
+
+.admin-btn{
+    border: 1px solid gold;
+    padding: 5px 25px;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: white;
+}
+.admin-btn:hover{
+    background-color: gold;
 }
 
 .forgot-password a {

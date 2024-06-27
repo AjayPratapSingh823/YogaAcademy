@@ -39,7 +39,7 @@ const TrainerInfo = () => {
 
             <button
                   type="button"
-                  class="btn btn-success"
+                  className="btn btn-success"
                   data-bs-toggle="modal"
                   data-bs-target={`#exampleModal${index}`}
                 >
@@ -47,45 +47,45 @@ const TrainerInfo = () => {
                 </button>
 
                 <div
-                  class="modal fade"
+                  className="modal fade"
                   id={`exampleModal${index}`}
                   tabIndex="-1"
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="exampleModalLabel">
                           {item.name}
                         </h1>
                         <button
                           type="button"
-                          class="btn-close"
+                          className="btn-close"
                           data-bs-dismiss="modal"
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body">
-                        <div class="container text-center">
-                          <div class="row">
-                            <div class="col">Phone:</div>
-                            <div class="col">{item.phone}</div>
+                      <div className="modal-body">
+                        <div className="container text-center">
+                          <div className="row">
+                            <div className="col">Phone:</div>
+                            <div className="col">{item.phone}</div>
                           </div>
-                          <div class="row">
-                            <div class="col">Email:</div>
-                            <div class="col">{item.email}</div>
+                          <div className="row">
+                            <div className="col">Email:</div>
+                            <div className="col">{item.email}</div>
                           </div>
-                          <div class="row">
-                            <div class="col">Address:</div>
-                            <div class="col">{item.address}</div>
+                          <div className="row">
+                            <div className="col">Address:</div>
+                            <div className="col">{item.address}</div>
                           </div>
                         </div>
                       </div>
-                      <div class="modal-footer">
+                      <div className="modal-footer">
                         <button
                           type="button"
-                          class="btn btn-danger"
+                          className="btn btn-danger"
                           data-bs-dismiss="modal"
                         >
                           Close

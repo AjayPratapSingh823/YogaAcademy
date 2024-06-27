@@ -19,6 +19,7 @@ const ContactUs = () => {
         message,
       }))
       alert(res.data)
+      window.location.reload()
     } catch (error) {
       alert(error)
     }
@@ -31,17 +32,17 @@ const ContactUs = () => {
       <h1>Get In Touch With Us</h1>
       <p>
         Our yoga classes are hot, warm, or non-heated and we offer a variety
-        of styles and approaches to suit everyone’s unique needs.
+        of styles and approaches to suit everyone's unique needs.
       </p>
     </div>
     <div className ={css["contactOuter"]}>
-      <form action="">
+      <form onSubmit={submitHandler}>
         <h2>Fill up the form below</h2>
         <input type="text" onChange={(e)=>setFullname(e.target.value)} placeholder="Name" id="uname" />
         <input type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" id="mail" />
         <input type="text" onChange={(e)=>setPhone(e.target.value)} placeholder="Contact no." id="phone" />
         <input type="text" onChange={(e)=>setMessage(e.target.value)} placeholder="Your Message" id="feedback" />
-        <button type='submit' class={css["sendMsg"]} onClick={submitHandler}>Send Message</button>
+        <button type='submit' className={css["sendMsg"]}>Send Message</button>
       </form>
     </div>
   </section>

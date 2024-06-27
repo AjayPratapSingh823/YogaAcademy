@@ -46,15 +46,15 @@ const AllTrainers = () => {
 
         {
             arr.map((item, index)=>(
-                <div class="card" key={index} style={{ width: "300px" }}>
+                <div className="card" key={index} style={{ width: "300px" }}>
           <img
             src={item.img}
-            class="card-img-top"
+            className="card-img-top"
             alt="..."
             style={{ width: "100%", height: "300px" }}
           />
-          <div class="card-body">
-            <h5 class="card-title text-center bg-dark text-light">
+          <div className="card-body">
+            <h5 className="card-title text-center bg-dark text-light">
                {item.name}
             </h5>
           </div>
