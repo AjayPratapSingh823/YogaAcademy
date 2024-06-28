@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import css from "../css/admin.module.css";
 import userImg from "../../assets/user.jpg";
+import axios from "axios"
 
 const UserInfo = () => {
+
+  const [userData, setUserData] = useState([])
 
   let arr = [
     {
@@ -47,19 +50,28 @@ const UserInfo = () => {
     },
   ];
 
-  const usersCount = arr.length;
+  const fetchUserInfo = async ()=>{
+    const res = await axios.get("http://localhost:4000/api/user-info")
+    setUserData(res.data)
+  }
+
+  useEffect(()=>{
+    fetchUserInfo()
+  }, [])
+
+  const usersCount = userData.length;
 
   return (
     <div>
       <h1 className="bg-success text-light text-center p-2">User Data</h1>
       <div className="container">
         <div className={css["data-card-div"]}>
-          {arr.map((item, index) => (
+          {userData.map((item, index) => (
             <div className={css["data-card"]} key={index}>
-              <img src={item.image} alt="" />
+              <img src={item.profilepic || userImg} alt="" />
               <div className={css["data"]}>
                 <h4 className="bg-success text-white text-center">
-                  {item.name}
+                  {item.fullname}
                 </h4>
                 <h6>{item.phone}</h6>
                 <h6>{item.email}</h6>

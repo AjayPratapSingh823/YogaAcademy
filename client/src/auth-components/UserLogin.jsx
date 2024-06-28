@@ -3,14 +3,17 @@ import css from "../css/login.module.css";
 import axios from 'axios'
 import imgYogaLogin from "../../assets/yoga-login.jpg";
 import imgGoogle from "../../assets/Google.png"
+import {useNavigate} from "react-router-dom"
 
 
 const UserLogin = () => {
+
+  const navigator = useNavigate()
+
     const [Form, setForm]=useState({
          email:'',
          password:''
     })
-    const [message, setMessage] = useState('');
     const handleChange=(e)=>{
         const {name,value}=e.target
         setForm({
@@ -28,7 +31,9 @@ const UserLogin = () => {
           localStorage.setItem("Email:",response.data.user.email);
 
           console.log('login successful');
-          setMessage(`Login Sucessfully`)
+          alert("Login Successful")
+          navigator("/")
+          window.location.reload()
         }
         catch(err){
             console.log(err);

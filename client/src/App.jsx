@@ -43,6 +43,7 @@ import AllTrainers from "./components/AllTrainers";
 import CreateBlog from "./blog/CreateBlog";
 import BecomeATrainer from "./components/BecomeATrainer";
 import BlogPage from "./components/BlogPage";
+import AddTrainer from "./admin-components/AddTrainer";
 
 const App = () => {
   return (
@@ -69,6 +70,7 @@ const App = () => {
           <Route path="/user-opt-courses" element={<UserOptCourses />} />
           <Route path="/user-payment" element={<UserPayment />} />
           <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/add-trainer" element={<AddTrainer />} />
           {/* Admin */}
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin-profile" element={<AdminProfile />} />
