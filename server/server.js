@@ -7,6 +7,7 @@ const connection = require('./db');
 const UserRoutes=require('./routes/UserRoutes')
 const BlogRoutes=require('./routes/BlogRoutes');
 const AdminRoutes = require("./routes/AdminRoutes")
+const TrainerRoutes = require("./routes/TrainerRoutes")
 const PORT=process.env.PORT
 
 
@@ -19,6 +20,7 @@ connection();
 app.use('/api',UserRoutes)
 app.use('/api',BlogRoutes)
 app.use('/api',AdminRoutes)
+app.use('/api',TrainerRoutes)
 
 
 app.listen(PORT,()=>{

@@ -13,9 +13,8 @@ const handleContact = async (req, res) =>{
             phone,
             message,
         })
-
         await contactData.save()
-        res.status(200).send("ok")
+        res.status(200).send("Your Queries has been sent to the Admin!")
     } catch (error) {
         res.status(203).send("Something went worng!")
     }

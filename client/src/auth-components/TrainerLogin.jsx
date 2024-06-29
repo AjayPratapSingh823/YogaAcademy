@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const AdminLogin = () => {
+const TrainerLogin = () => {
   return (
     <div className="border rounded m-2 p-2 text-center">
-      <h1 className="bg-success text-white">Welcome Admin!</h1>
+      <h1 className="bg-success text-white">Welcome Trainer!</h1>
       <form action="">
         <div class="input-group flex-nowrap m-3">
           <span class="input-group-text" id="addon-wrapping">
@@ -31,7 +31,7 @@ const AdminLogin = () => {
         <button className="btn btn-success">Login</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default AdminLogin;
+export default TrainerLogin
