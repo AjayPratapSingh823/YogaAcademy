@@ -1,6 +1,6 @@
 const trainerModel = require("../models/Trainer")
 
-const handleTrainerLogin = async (req, res)=>{
+const handleTrainerSignin = async (req, res)=>{
     const {fullname, phone, email, qualification, password, confPassword} = req.body
     try {
         const exist = await trainerModel.findOne({ email });
@@ -24,4 +24,4 @@ const handleTrainerLogin = async (req, res)=>{
     }
 }
 
-module.exports = {handleTrainerLogin}
+module.exports = {handleTrainerSignin}

@@ -15,9 +15,7 @@ const AddTrainer = () => {
     const res = await axios.get(
       "http://localhost:4000/api/fetch-trainer-req"
     );
-    console.log(res.data);
     setTrainerReq(res.data);
-    console.log(trainerReq);
   };
 
   useEffect(() => {
