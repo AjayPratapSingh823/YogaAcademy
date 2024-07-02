@@ -22,10 +22,11 @@ import FAQs from "./admin-components/FAQs";
 import Queries from "./admin-components/Queries";
 import TrainerInfo from "./admin-components/TrainerInfo";
 import UserInfo from "./admin-components/UserInfo";
+import AdminLogin from "./auth-components/AdminLogin";
 // Trainer
 import TrainerBlogs from "./trainer components/TrainerBlogs";
 import TrainerProfile from "./trainer components/TrainerProfile";
-import AdminLogin from "./auth-components/AdminLogin";
+import TrainerLogin from "./auth-components/TrainerLogin";
 // Auth
 const UserLogin = React.lazy(() => import("./auth-components/UserLogin"));
 import UserSignup from "./auth-components/UserSignup";
@@ -43,6 +44,7 @@ import AllTrainers from "./components/AllTrainers";
 import CreateBlog from "./blog/CreateBlog";
 import BecomeATrainer from "./components/BecomeATrainer";
 import BlogPage from "./components/BlogPage";
+import AddTrainer from "./admin-components/AddTrainer";
 
 const App = () => {
   return (
@@ -69,7 +71,9 @@ const App = () => {
           <Route path="/user-opt-courses" element={<UserOptCourses />} />
           <Route path="/user-payment" element={<UserPayment />} />
           <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/add-trainer" element={<AddTrainer />} />
           {/* Admin */}
+          <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin-profile" element={<AdminProfile />} />
           <Route path="/adding-classes" element={<AddingClasses />} />
@@ -78,6 +82,7 @@ const App = () => {
           <Route path="/trainer-data" element={<TrainerInfo />} />
           <Route path="/user-data" element={<UserInfo />} />
           {/* Trainer */}
+          <Route path="/trainer-login" element={<TrainerLogin/>}/>
           <Route path="/trainer-blogs" element={<TrainerBlogs />} />
           <Route path="/trainer-profile" element={<TrainerProfile />} />
           {/* Auth */}
@@ -92,7 +97,6 @@ const App = () => {
           <Route path="/user-signup" element={<UserSignup />} />
           <Route path="/forget-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
-          <Route path="/admin-login" element={<AdminLogin />} />
           {/* Footer */}
           <Route path="/our-mission" element={<OurMission />} />
           <Route path="/yoga-demo-videos" element={<YogaDemoVideos />} />

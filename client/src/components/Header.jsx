@@ -9,6 +9,12 @@ const Header = () => {
   localStorage.length === 0 ? setIsLoggedIn(false) : setIsLoggedIn(true) 
   }, [])
 
+  const logout = ()=>{
+    alert('Logged out');
+    localStorage.clear()
+    window.location.reload()
+  }
+
   return (
     <header className="sticky-top">
       {/* Top Section */}
@@ -22,7 +28,7 @@ const Header = () => {
           <i className="fa-solid fa-envelope"></i> info@mail.com
         </p>
         {isLoggedIn ? (
-          <a href="/" className="btn btn-success m-2">
+          <a onClick={logout} href="/" className="btn btn-success m-2">
             Logout
           </a>
         ) : (

@@ -3,14 +3,17 @@ import css from "../css/login.module.css";
 import axios from 'axios'
 import imgYogaLogin from "../../assets/yoga-login.jpg";
 import imgGoogle from "../../assets/Google.png"
+import {useNavigate} from "react-router-dom"
 
 
 const UserLogin = () => {
+
+  const navigator = useNavigate()
+
     const [Form, setForm]=useState({
          email:'',
          password:''
     })
-    const [message, setMessage] = useState('');
     const handleChange=(e)=>{
         const {name,value}=e.target
         setForm({
@@ -28,7 +31,9 @@ const UserLogin = () => {
           localStorage.setItem("Email:",response.data.user.email);
 
           console.log('login successful');
-          setMessage(`Login Sucessfully`)
+          alert("Login Successful")
+          navigator("/")
+          window.location.reload()
         }
         catch(err){
             console.log(err);
@@ -51,8 +56,9 @@ const UserLogin = () => {
           <input type="password" name="password" value={Form.password} onChange={handleChange} placeholder="Password" />
           <button type="submit">Login</button>
         </form>
-        <button className={`${css["google-btn"]}`} >Login with <img src={imgGoogle} alt="google" /></button>
-        <a href="/admin-login" className={`${css["admin-btn"]}`} >Login as Admin </a>
+        <button className={`${css["google-btn"]} btn btn-outline-warning text-black`} >Login with <img src={imgGoogle} alt="google" /></button>
+        <a href="/admin-login" className="btn btn-outline-warning m-1 text-black" >Login as Admin </a>
+        <a href="/trainer-login" className="btn btn-outline-warning m-1 text-black" >Login as Trainer </a>
 
         <div className={`${css["forgot-password"]}`}>
           <a href="/forget-password">Forget password?</a>
