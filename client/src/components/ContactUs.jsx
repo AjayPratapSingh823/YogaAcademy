@@ -38,10 +38,10 @@ const ContactUs = () => {
     <div className ={css["contactOuter"]}>
       <form onSubmit={submitHandler}>
         <h2>Fill up the form below</h2>
-        <input type="text" onChange={(e)=>setFullname(e.target.value)} placeholder="Name" id="uname" />
-        <input type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" id="mail" />
-        <input type="text" onChange={(e)=>setPhone(e.target.value)} placeholder="Contact no." id="phone" />
-        <input type="text" onChange={(e)=>setMessage(e.target.value)} placeholder="Your Message" id="feedback" />
+        <input type="text" onChange={(e)=>setFullname(e.target.value)} placeholder="Name" id="uname" required/>
+        <input type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" id="mail" required/>
+        <input type="text" onChange={(e)=>setPhone(e.target.value)} placeholder="Contact no." id="phone" required/>
+        <input type="text" onChange={(e)=>setMessage(e.target.value)} placeholder="Your Message" id="feedback" required/>
         <button type='submit' className={css["sendMsg"]}>Send Message</button>
       </form>
     </div>

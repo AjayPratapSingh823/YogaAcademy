@@ -1,4 +1,4 @@
-const mongoose= require(mongoose);
+const mongoose= require("mongoose");
 const trainerSchema =new mongoose.Schema({
     fullname: String,
     phone: String,
@@ -6,7 +6,6 @@ const trainerSchema =new mongoose.Schema({
     qualifications: String,
     password: String,
     confPassword: String,
-
 })
-const trainerModel= new trainerSchema.model("trainer datas")
+const trainerModel= new mongoose.model("trainer datas", trainerSchema)
 module.exports = trainerModel

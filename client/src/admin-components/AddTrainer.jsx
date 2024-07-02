@@ -40,6 +40,7 @@ const AddTrainer = () => {
         confPassword,
       }))
       alert(res.data);
+      window.location.reload()
     } catch (error) {
       alert(error)
     }
@@ -53,37 +54,37 @@ const AddTrainer = () => {
             <span className="input-group-text" id="basic-addon1">
               Trainer Name
             </span>
-            <input type="text" className="form-control" onChange={(e)=>setFullname(e.target.value)}/>
+            <input type="text" className="form-control" onChange={(e)=>setFullname(e.target.value)} required/>
           </div>
           <div className="input-group">
             <span className="input-group-text" id="basic-addon1">
               Phone
             </span>
-            <input type="text" className="form-control" onChange={(e)=>setPhone(e.target.value)}/>
+            <input type="text" className="form-control" onChange={(e)=>setPhone(e.target.value)} required/>
           </div>
           <div className="input-group">
             <span className="input-group-text" id="basic-addon1">
               Email
             </span>
-            <input type="text" className="form-control" onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="text" className="form-control" onChange={(e)=>setEmail(e.target.value)} required/>
           </div>
 
           <div className="input-group">
             <span className="input-group-text">Qualifications</span>
-            <textarea className="form-control" onChange={(e)=>setQualifications(e.target.value)}></textarea>
+            <textarea className="form-control" onChange={(e)=>setQualifications(e.target.value)} required></textarea>
           </div>
 
           <div className="input-group">
             <span className="input-group-text" id="basic-addon1">
               Password
             </span>
-            <input type="password" className="form-control" onChange={(e)=>setPassword(e.target.value)}/>
+            <input type="password" className="form-control" onChange={(e)=>setPassword(e.target.value)} required/>
           </div>
           <div className="input-group">
             <span className="input-group-text" id="basic-addon1">
               Confirm Password
             </span>
-            <input type="password" className="form-control" onChange={(e)=>setConfPassword(e.target.value)}/>
+            <input type="password" className="form-control" onChange={(e)=>setConfPassword(e.target.value)} required/>
           </div>
           <button type="submit" className="btn btn-success">
             Add Trainer
