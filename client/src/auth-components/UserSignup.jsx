@@ -25,11 +25,15 @@ const UserSignup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(Form.password !== Form.confirmpassword){
+      return alert("Password not matached!")
+    }
     try {
       const response = await axios.post(
         "http://localhost:4000/api/user-signup",
         Form
       );
+  
       console.log(response);
       alert("User Signed In!");
       navigator("/user-login")

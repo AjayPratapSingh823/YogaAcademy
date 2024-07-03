@@ -24,32 +24,29 @@ const BecomeATrainer = () => {
 
   return (
     <div>
-      <h1 className="text-center bg-success text-white">Enter Your Details</h1>
-      <form className="m-2 p-2 border rounded" onSubmit={submitHandler}>
+    <h1 className="m-2 text-center text-success">Trainer's Details</h1>
+      <div className="d-flex justify-content-center">
+
+      <form className="m-4 p-2 border rounded bg-light" style={{width:"300px"}} onSubmit={submitHandler}>
         <div className="input-group">
-          <span className="input-group-text" id="basic-addon1">
-            Full Name
-          </span>
-          <input type="text" className="form-control" name="title" onChange={(e)=>setFullname(e.target.value)} required />
+          <input type="text" className="form-control" name="title" placeholder="Full name" onChange={(e)=>setFullname(e.target.value)} required />
         </div>
 
         <div className="input-group">
-          <span className="input-group-text" id="basic-addon1">
-            Phone
-          </span>
-          <input type="text" className="form-control" name="title" onChange={(e)=>setPhone(e.target.value)} required/>
+          <input type="text" className="form-control" name="title" placeholder="Phone" onChange={(e)=>setPhone(e.target.value)} required/>
         </div>
 
         <div className="input-group">
-          <span className="input-group-text" id="basic-addon1">
-            Email
-          </span>
-          <input type="email" className="form-control" name="title" onChange={(e)=>setEmail(e.target.value)} required/>
+
+          <input type="email" className="form-control" name="title" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} required/>
         </div>
 
         <div className="input-group">
-          <span className="input-group-text">Qualifications</span>
-          <textarea className="form-control" name="desc" onChange={(e)=>setQualifications(e.target.value)} required></textarea>
+          <textarea className="form-control" name="desc" placeholder="Your Qualification" onChange={(e)=>setQualifications(e.target.value)} required></textarea>
+        </div>
+
+        <div className="input-group">
+          <textarea className="form-control" name="desc" placeholder="Your Experience" onChange={(e)=>setQualifications(e.target.value)} required></textarea>
         </div>
 
         <div className="text-center m-2">
@@ -58,6 +55,7 @@ const BecomeATrainer = () => {
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };
