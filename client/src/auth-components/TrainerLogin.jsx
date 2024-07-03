@@ -5,7 +5,7 @@ const TrainerLogin = () => {
     <div className=" m-2 p-2 text-center">
       <h1 className="text-success">Welcome Trainer!</h1>
       <div className='d-flex justify-content-center'>
-      <form action="" style={{width:"300px"}}>
+      <form action="" style={{width:"300px", height:"400px"}}>
         <div class="input-group flex-nowrap m-2">
           <span class="input-group-text bg-success text-white" id="addon-wrapping">
             Email

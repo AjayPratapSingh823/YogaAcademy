@@ -27,7 +27,7 @@ const BecomeATrainer = () => {
     <h1 className="m-2 text-center text-success">Trainer's Details</h1>
       <div className="d-flex justify-content-center">
 
-      <form className="m-4 p-2 border rounded bg-light" style={{width:"300px"}} onSubmit={submitHandler}>
+      <form className="m-4 p-2 border rounded bg-light" style={{width:"500px"}} onSubmit={submitHandler}>
         <div className="input-group">
           <input type="text" className="form-control" name="title" placeholder="Full name" onChange={(e)=>setFullname(e.target.value)} required />
         </div>
