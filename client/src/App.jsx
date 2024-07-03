@@ -45,6 +45,7 @@ import CreateBlog from "./blog/CreateBlog";
 import BecomeATrainer from "./components/BecomeATrainer";
 import BlogPage from "./components/BlogPage";
 import AddTrainer from "./admin-components/AddTrainer";
+import DemoSession from "./components/DemoSession";
 
 const App = () => {
   return (
@@ -102,6 +103,7 @@ const App = () => {
           <Route path="/yoga-demo-videos" element={<YogaDemoVideos />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/create-blog" element={<CreateBlog />} />
+          <Route path="/demo" element={<DemoSession />} />
         </Routes>
         <Footer />
       </BrowserRouter>
