@@ -11,7 +11,7 @@ const KidsClass = () => {
           <h1>Kids Yoga Classes</h1>
         </div>
       </main>
-      <div className={css["second-div"]} style={{background: "linear-gradient(135deg, rgb(221, 30, 251) 0%, rgb(238, 144, 225) 50%, white)"}}>
+      <div className={css["second-div"]} style={{background: "linear-gradient(135deg, rgb(240, 142, 255) 0%, rgb(255, 244, 221) 50%, white)"}}>
         <div className={css["flex"]}>
           <div className={css["text"]}>
             <h4>

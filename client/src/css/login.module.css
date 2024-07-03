@@ -85,7 +85,7 @@ form button{
     text-decoration: none;
     color: black;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 455px) {
     .container {
         text-align: center;
     }
@@ -93,6 +93,6 @@ form button{
         width: 200px;
     }
     .image1 img{
-        width: 200px;
+        display: none;
     }
 }
