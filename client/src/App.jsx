@@ -37,7 +37,7 @@ import Footer from "./components/Footer";
 import OurMission from "./components/OurMission";
 import YogaDemoVideos from "./components/YogaDemoVideos";
 import Testimonials from "./components/Testimonials";
-import AllGroupClasses from "./components/AllGroupClasses";
+import AllGroupClasses from "./components/Classes/AllGroupClasses";
 import AdminDashboard from "./admin-components/AdminDashboard";
 import AdminProfile from "./admin-components/AdminProfile";
 import AllTrainers from "./components/AllTrainers";
@@ -46,6 +46,8 @@ import BecomeATrainer from "./components/BecomeATrainer";
 import BlogPage from "./components/BlogPage";
 import AddTrainer from "./admin-components/AddTrainer";
 import DemoSession from "./components/DemoSession";
+import AllkidsClasses from "./components/Classes/AllKidsClasses";
+import AllPrivateClasses from "./components/Classes/AllPrivateClass";
 
 const App = () => {
   return (
@@ -65,6 +67,8 @@ const App = () => {
           <Route path="/kids-classes" element={<KidsClass />} />
           <Route path="/group-classes" element={<GroupClass />} />
           <Route path="/all-group-classes" element={<AllGroupClasses />} />
+          <Route path="/all-kids-classes" element={<AllkidsClasses></AllkidsClasses>}  />
+          <Route path="/all-private-classes" element={<AllPrivateClasses></AllPrivateClasses>}  />
           <Route path="/private-classes" element={<PrivateClass />} />
           {/* User */}
           <Route path="/user-dashboard" element={<UserDashboard />} />

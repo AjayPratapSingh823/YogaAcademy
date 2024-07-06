@@ -1,12 +1,13 @@
 const mongoose = require("mongoose")
 
 const classesSchema = new mongoose.Schema({
-    title:String,
+    Trainer:String,
     category:String,
     description:String,
+    price:String,
     date:String,
 })
 
-const classesModel = new mongoose.model("classes", classesSchema)
+const classSchema = new mongoose.model("classes", classesSchema)
 
-module.exports = classesModel
+module.exports = classSchema

@@ -3,8 +3,8 @@ function DemoSession() {
   return (
     <div className="container mt-5">
     <div className="row justify-content-center">
-      <div className="col-md-8 custom-width">
-        <h2 className="text-center">Book a Demo</h2>
+      <div className="col-md-8 custom-width"> 
+        <h2 className="text-center">Book a Demo Yoga Session</h2>
         <form>
           <div className="form-group">
             <label htmlFor="name">Name</label>
