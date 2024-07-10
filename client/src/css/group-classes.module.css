@@ -2,16 +2,19 @@
     background: url(../../assets/group-classes.jpg);
     background-position: center; 
     background-size: cover;
+    padding: 0;
 }
 .kids-bg{
     background: url(../../assets/kids-classes.jpg);
     background-position: center; 
     background-size: cover;
+    padding: 0;
 }
 .private-bg{
     background: url(../../assets/private-classes.jpeg);
     background-position: center; 
     background-size: cover;
+    padding: 0;
 }
 .main-box{
     background-color: rgba(0, 0, 0, 0.5);
@@ -19,6 +22,7 @@
     justify-content: center;
     align-items: center;
     height: 450px;
+    width: 100vw;
     color: white;
 }
 .second-div{
