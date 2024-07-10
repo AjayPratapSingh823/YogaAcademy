@@ -4,6 +4,7 @@ import userImg from "../../assets/user.jpg";
 import UserOptCourses from "./UserOptCourses";
 import UserProfile from "./UserProfile";
 import UserCart from "./UserCart";
+import UserLogin from "../auth-components/UserLogin";
 
 const UserDashboard = () => {
   const [dashNum, setDashNum] = useState("0");
@@ -14,6 +15,7 @@ const UserDashboard = () => {
    const userName=localStorage.getItem('full Name:');
    console.log(photo);
    setUserName(userName)
+   console.log(userName);
    setprofilephoto(photo);
   },[])
   let dashRoute = ()=>{
@@ -28,10 +30,11 @@ const UserDashboard = () => {
 
   return (
     <div>
+    {userName==null ? <UserLogin/>:
       <div className={`${css["main"]}`}>
         <div className={`${css["one"]}`}>
         {profilephoto ?<img src={profilephoto} className={css["user-img"]} alt="" />:
-        <p>Loading...</p>
+        <img src={userImg} width="100em" alt="image" />
           }
          
           <h2 className="text-light text-center m-2">Welcome {userName || "User"}!</h2>
@@ -54,7 +57,8 @@ const UserDashboard = () => {
         <div className={`${css["third"]} p-3`}>
           {dashRoute()}
         </div>
-      </div>
+      </div>}
+      
     </div>
   );
 };

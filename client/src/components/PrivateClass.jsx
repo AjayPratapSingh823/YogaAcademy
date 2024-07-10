@@ -45,42 +45,9 @@ const PrivateClass = () => {
         focus. AYS Group Yoga classes aim at providing a holistic experience.
       </p>
     </div>
-    <div className={css["forth-div"]}>
-      <h2>Our Latest Classes</h2>
-      <div>
-        <div className="card m-2">
-          <div className="card-body">
-            <h5 className="card-title">Yoga Classes</h5>
-            <p className="card-text">
-              With supporting text below as a natural lead-in to additional
-              content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
-            </p>
-            <a href="#" className="btn btn-success m-2">
-              Buy Class
-            </a>
-            <a href="#" className="btn btn-outline-dark">
-              Add to Cart
-            </a>
-          </div>
-        </div>
-        <div className="card m-2">
-          <div className="card-body">
-            <h5 className="card-title">Yoga Classes</h5>
-            <p className="card-text">
-              With supporting text below as a natural lead-in to additional
-              content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi maxime eum!
-            </p>
-            <a href="#" className="btn btn-success m-2">
-              Buy Class
-            </a>
-            <a href="#" className="btn btn-outline-dark">
-              Add to Cart
-            </a>
-          </div>
-        </div>
-        <a href="/all-group-classes" className="btn btn-dark m-2">See more....</a>
+    <div className="text-center">
+      <a href="/all-private-classes" className="btn btn-dark m-2 center">Explore Our Classes</a>
       </div>
-    </div>
   </div>
   )
 }
