@@ -1,8 +1,5 @@
-
 import css from "../css/login.module.css";
-import imgYogaLogin from "../../assets/yoga-login.jpg";
 import { useState } from "react";
-
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
 
@@ -25,18 +22,14 @@ const ResetPassword = () => {
   }
 
   return (
-    <div className={`${css["container"]}`}>
-      <div className={`${css["image1"]}`}> 
-        <img src={imgYogaLogin} />
-      </div>
-
-      <div className={`${css["login-form"]}`}>
+    <div>
+      <div className={`${css["center-div"]}`}>
         <h1>Reset Password</h1>
 
         <form onSubmit={handleSubmit}>
-          <input type="password" name='password' value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="New Password" />
-          <input type="password" placeholder="Confirm Password" />
-          <button type="submit">Reset Password</button>
+          <input className={css["form-form"]} type="password" name='password' value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="New Password" />
+          <input className={css["form-form"]} type="password" placeholder="Confirm Password" />
+          <button className={css["form-btn"]} type="submit">Reset Password</button>
         </form>
       </div>
     </div>

@@ -2,35 +2,39 @@ import React from "react";
 
 const AdminLogin = () => {
   return (
-    <div className="border rounded m-2 p-2 text-center">
-      <h1 className="bg-success text-white">Welcome Admin!</h1>
-      <form action="">
-        <div class="input-group flex-nowrap m-3">
-          <span class="input-group-text" id="addon-wrapping">
-            Email
-          </span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
-        </div>
-        <div class="input-group flex-nowrap m-3">
-          <span class="input-group-text" id="addon-wrapping">
-            Password
-          </span>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Password"
-            aria-describedby="addon-wrapping"
-          />
-        </div>
-        <button className="btn btn-success">Login</button>
-      </form>
-    </div>
+    <>
+      <div className={css["top-div"]}>
+        <h2>User Login</h2>
+      </div>
+      <section className={css["registerSec"]}>
+        <form>
+          <div class={css["formOuter"]}>
+            <a class={css["active-btn"]} id="signIn">
+              Sign In
+            </a>
+            <a href="/user-signup" class={css["signInRegister"]} id="register">
+              Register
+            </a>
+          </div>
+          <div class={css["googleSignIn"]}>
+            <img src={google} alt="" />
+            <span>Sign in with Google</span>
+          </div>
+          <hr />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <p>
+            <input type="checkbox" style={{ width: "1em" }} /> I agree to the
+            <a href="" id="forgotPass">
+              Terms of Service & Privacy Policy
+            </a>
+          </p>
+          <a href="/forget-password">Forgot Password?</a>
+          <button>Login</button>
+          <a href="/login-page" className={css["form-btn"]}>Back</a>
+        </form>
+      </section>
+    </>
   );
 };
 

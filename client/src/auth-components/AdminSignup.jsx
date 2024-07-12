@@ -1,50 +1,12 @@
-import { useState } from "react";
-import css from "../css/login.module.css";
+import React from 'react'
 import google from "../../assets/Google.png";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-const UserSignup = () => {
-  const navigator = useNavigate();
+import css from "../css/login.module.css";
 
-  const [Form, setForm] = useState({
-    fullname: "",
-    phone: "",
-    email: "",
-    password: "",
-    confirmpassword: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({
-      ...Form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (Form.password !== Form.confirmpassword) {
-      return alert("Password not matached!");
-    }
-    try {
-      const response = await axios.post(
-        "http://localhost:4000/api/user-signup",
-        Form
-      );
-
-      console.log(response);
-      alert("User Signed In!");
-      navigator("/user-login");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+const AdminSignup = () => {
   return (
     <>
     <div className={css["top-div"]}>
-    <h2>User Sign up</h2>
+    <h2>Admin Sign up</h2>
   </div>
     <section className={css["registerSec"]}>
       <form>
@@ -76,7 +38,7 @@ const UserSignup = () => {
       </form>
     </section>
     </>
-  );
-};
+  )
+}
 
-export default UserSignup;
+export default AdminSignup

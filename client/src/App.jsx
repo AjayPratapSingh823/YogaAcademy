@@ -48,6 +48,9 @@ import AddTrainer from "./admin-components/AddTrainer";
 import DemoSession from "./components/DemoSession";
 import AllkidsClasses from "./components/Classes/AllKidsClasses";
 import AllPrivateClasses from "./components/Classes/AllPrivateClass";
+import LoginPage from "./auth-components/LoginPage";
+import TrainerSignup from "./auth-components/TrainerSignup";
+import AdminSignup from "./auth-components/AdminSignup";
 
 const App = () => {
   return (
@@ -79,6 +82,7 @@ const App = () => {
           <Route path="/add-trainer" element={<AddTrainer />} />
           {/* Admin */}
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-signup" element={<AdminSignup />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin-profile" element={<AdminProfile />} />
           <Route path="/adding-classes" element={<AddingClasses />} />
@@ -88,9 +92,11 @@ const App = () => {
           <Route path="/user-data" element={<UserInfo />} />
           {/* Trainer */}
           <Route path="/trainer-login" element={<TrainerLogin/>}/>
+          <Route path="/trainer-signup" element={<TrainerSignup/>}/>
           <Route path="/trainer-blogs" element={<TrainerBlogs />} />
           <Route path="/trainer-profile" element={<TrainerProfile />} />
           {/* Auth */}
+          <Route path="/login-page" element={<LoginPage/>}/>
           <Route
             path="/user-login"
             element={

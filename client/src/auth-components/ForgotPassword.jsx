@@ -1,8 +1,7 @@
-
 import css from "../css/login.module.css";
-import imgYogaLogin from "../../assets/yoga-login.jpg";
 import { useState } from "react";
 import axios from 'axios';
+
 const ForgotPassword = () => {
   const [email, setEmail]=useState('');
   const [message,setMessage]=useState('');
@@ -19,24 +18,21 @@ const ForgotPassword = () => {
       }
       console.error(err);
     }
-
   }
 
   return (
-    <div className={`${css["container"]}`}>
-      <div className={`${css["image1"]}`}> 
-        <img src={imgYogaLogin} />
-      </div>
-
-      <div className={`${css["login-form"]}`}>
-        <h1>Forgot Password?</h1>
-        <h2>Enter your Email</h2>
-
+    <div>
+      <div className={`${css["top-div"]}`}>
+        <h2>Forgot Password?</h2>
+        <div className={css["center-div"]}>
+        <h3>Enter your Email</h3>
         <form onSubmit={handleSubmit}>
-          <input type="text"  onChange={(e)=>setEmail(e.target.value)}placeholder="Email" />
-          <button type="submit" >Send Verification Link</button>
+          <input type="text" className={css["form-form"]} onChange={(e)=>setEmail(e.target.value)}placeholder="Email" />
+          <button type="submit" className={css["form-btn"]}>Send Verification Link</button>
              {message && <p className="message">{message}</p>}
         </form>
+
+        </div>
       </div>
     </div>
   )

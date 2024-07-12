@@ -1,37 +1,43 @@
 import React from 'react'
+import google from "../../assets/Google.png";
+import css from "../css/login.module.css";
+
 
 const TrainerLogin = () => {
   return (
-    <div className=" m-2 p-2 text-center">
-      <h1 className="text-success">Welcome Trainer!</h1>
-      <div className='d-flex justify-content-center'>
-      <form action="" style={{width:"300px", height:"400px"}}>
-        <div class="input-group flex-nowrap m-2">
-          <span class="input-group-text bg-success text-white" id="addon-wrapping">
-            Email
-          </span>
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
-        </div>
-        <div class="input-group flex-nowrap m-2">
-          <span class="input-group-text bg-success text-white" id="addon-wrapping">
-            Password
-          </span>
-          <input
-            type="password"
-            class="form-control"
-            aria-describedby="addon-wrapping"
-          />
-        </div>
-        <button className="btn btn-success">Login</button>
-      <a href="/forget-trainer-password" className='text-success'>Forget password?</a>
-      </form>
+    <>
+      <div className={css["top-div"]}>
+        <h2>Trainer Login</h2>
       </div>
-    </div>
+      <section className={css["registerSec"]}>
+        <form>
+          <div class={css["formOuter"]}>
+            <a class={css["active-btn"]} id="signIn">
+              Sign In
+            </a>
+            <a href="/trainer-signup" class={css["signInRegister"]} id="register">
+              Register
+            </a>
+          </div>
+          <div class={css["googleSignIn"]}>
+            <img src={google} alt="" />
+            <span>Sign in with Google</span>
+          </div>
+          <hr />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <p>
+            <input type="checkbox" style={{ width: "1em" }} /> I agree to the
+            <a href="" id="forgotPass">
+              Terms of Service & Privacy Policy
+            </a>
+          </p>
+          <a href="/forget-password">Forgot Password?</a>
+          <button>Login</button>
+          <a href="/login-page" className={css["form-btn"]}>Back</a>
+        </form>
+      </section>
+    </>
   )
 }
 
