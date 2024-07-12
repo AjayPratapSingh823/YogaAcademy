@@ -6,13 +6,12 @@ import Home from "./components/Home";
 import IAmNewHere from "./components/IAmNewHere";
 import ContactUs from "./components/ContactUs";
 import TwoZeroTwoFour from "./components/TwoZeroTwoFour";
-import Blogs from "./components/Blogs";
+import Blogs from "./components/Blogs/Blogs";
 // Offering Classes
 import KidsClass from "./components/KidsClass";
 import GroupClass from "./components/GroupClass";
 import PrivateClass from "./components/PrivateClass";
 // User
-import UserCart from "./user-components/UserCart";
 import UserOptCourses from "./user-components/UserOptCourses";
 import UserPayment from "./user-components/UserPayment";
 import UserProfile from "./user-components/UserProfile";
@@ -40,14 +39,16 @@ import Testimonials from "./components/Testimonials";
 import AllGroupClasses from "./components/Classes/AllGroupClasses";
 import AdminDashboard from "./admin-components/AdminDashboard";
 import AdminProfile from "./admin-components/AdminProfile";
-import AllTrainers from "./components/AllTrainers";
+import AllTrainers from "./components/Trainer/AllTrainers";
 import CreateBlog from "./blog/CreateBlog";
-import BecomeATrainer from "./components/BecomeATrainer";
-import BlogPage from "./components/BlogPage";
+import BecomeATrainer from "./components/Trainer/BecomeATrainer";
+import BlogPage from "./components/Blogs/BlogPage";
 import AddTrainer from "./admin-components/AddTrainer";
-import DemoSession from "./components/DemoSession";
+import DemoSession from "./components/Demo/DemoSession";
 import AllkidsClasses from "./components/Classes/AllKidsClasses";
 import AllPrivateClasses from "./components/Classes/AllPrivateClass";
+import Payment from "./Payment/Payment";
+import Chat from "./Chat/Chat";
 
 const App = () => {
   return (
@@ -72,7 +73,6 @@ const App = () => {
           <Route path="/private-classes" element={<PrivateClass />} />
           {/* User */}
           <Route path="/user-dashboard" element={<UserDashboard />} />
-          <Route path="/user-cart" element={<UserCart />} />
           <Route path="/user-opt-courses" element={<UserOptCourses />} />
           <Route path="/user-payment" element={<UserPayment />} />
           <Route path="/user-profile" element={<UserProfile />} />
@@ -108,7 +108,10 @@ const App = () => {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/create-blog" element={<CreateBlog />} />
           <Route path="/demo" element={<DemoSession />} />
+          <Route path="/payment/:id" element={<Payment />} />
+          
         </Routes>
+        <Chat />
         <Footer />
       </BrowserRouter>
     </div>
