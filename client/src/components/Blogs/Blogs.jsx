@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import css from "../css/blogs.module.css";
+import css from "../../css/blogs.module.css";
 import axios from 'axios';
 
 const Blogs = () => {
@@ -37,7 +37,7 @@ const Blogs = () => {
                                 <p>{blog.date}</p>
                                 <p>{blog.desc}</p>
                             </div>
-                            <a href="/blog-page" className="btn btn-success">Read more....</a>
+                            <a href="/blog-page" className="btn btn-success mx-3">Read more....</a>
                         </div>
                     ))}
                 </section>

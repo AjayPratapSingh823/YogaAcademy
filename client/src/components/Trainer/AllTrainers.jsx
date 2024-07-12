@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import userImg from "../../assets/user.jpg";
-import css from "../css/become-a-trainer.module.css"
+import userImg from '../../../assets/user.jpg'
+import css from "../../css/become-a-trainer.module.css"
 import axios from "axios";
-import headImg from "../../assets/All Trainers assets/headImg1.jpg"
+import headImg from "../../../assets/All Trainers assets/headImg1.jpg"
 
 const AllTrainers = () => {
   const [trainers, setTrainers] = useState([]);

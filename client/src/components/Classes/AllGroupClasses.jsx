@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AllGroupClasses = () => {
+  const navigate=useNavigate();
   const [Group, setGroup] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,6 +34,10 @@ const AllGroupClasses = () => {
     return <div>{error}</div>;
   }
 
+  const handleEnroll=(id)=>{
+    navigate(`/payment/${id}`);
+}
+
   return (
     <div className='m-3'>
       <a href="/group-classes" className='btn btn-dark'>Back</a>
@@ -47,7 +53,7 @@ const AllGroupClasses = () => {
               <p><strong>Type:</strong> {kidClass.category}</p>
               <p><strong>Date:</strong> {kidClass.date}</p>
               <p><strong>Fees:</strong> {kidClass.price}</p>
-              <button className='btn btn-success'>Enroll in class</button>
+              <button className='btn btn-success' onClick={()=>handleEnroll(kidClass._id)}>Enroll in class</button>
             </li>
           ))}
         </ul>

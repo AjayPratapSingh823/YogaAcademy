@@ -3,7 +3,6 @@ import css from "../css/user-dashboard.module.css";
 import userImg from "../../assets/user.jpg";
 import UserOptCourses from "./UserOptCourses";
 import UserProfile from "./UserProfile";
-import UserCart from "./UserCart";
 import UserLogin from "../auth-components/UserLogin";
 
 const UserDashboard = () => {
@@ -23,8 +22,6 @@ const UserDashboard = () => {
       return <UserProfile />
     } else if(dashNum === "1"){
       return <UserOptCourses />
-    } else {
-      return <UserCart />
     }
   }
 
@@ -47,9 +44,6 @@ const UserDashboard = () => {
               <a onClick={() => setDashNum("1")} className={
                 dashNum === "1" ? "bg-white text-success" : ""
               } href="#">Your Courses</a>
-              <a onClick={() => setDashNum("2")} className={
-                dashNum === "2" ? "bg-white text-success" : ""
-              } href="#">Your Cart</a>
               <a href="/">Logout</a>
             </div>
           </div>
