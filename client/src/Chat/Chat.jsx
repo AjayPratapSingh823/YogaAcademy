@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ChatBot from 'react-simple-chatbot';
-
-import './Chat.css'; // Create and import a CSS file for styling
+import './Chat.css'; 
 
 function Chat() {
   const [showBot, setShowBot] = useState(false);
