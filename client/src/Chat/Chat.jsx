@@ -5,6 +5,7 @@ import './Chat.css';
 function Chat() {
   const [showBot, setShowBot] = useState(false);
 
+  
   const steps = [
     {
       id: 'Greet',

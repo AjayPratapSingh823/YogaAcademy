@@ -43,9 +43,6 @@ const UserSignup = () => {
 
   return (
     <>
-    <div className={css["top-div"]}>
-    <h2>User Sign up</h2>
-  </div>
     <section className={css["registerSec"]}>
       <form onSubmit={handleSubmit}>
         <div className={css["formOuter"]}>
