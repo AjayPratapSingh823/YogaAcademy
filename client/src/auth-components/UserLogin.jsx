@@ -68,9 +68,16 @@ const UserLogin = () => {
               Register
             </a>
           </div>
-          <div class={css["googleSignIn"]}>
-            <img src={google} alt="" />
-            <span>Sign in with Google</span>
+          <div className={css["googleSignIn"]}>
+          <GoogleLogin
+            onSuccess={handleGoogleSuccess}
+            onError={handleGoogleFailure}
+            render={({ onClick }) => (
+              <button onClick={onClick} className={css["googleSignInBtn"]}>
+                <img src={google} alt="Google icon" />Sign in with Google
+              </button>
+            )}
+          />
           </div>
           <hr />
           <input type="email" name="email" placeholder="Email" onChange={handleChange}/>
