@@ -1,5 +1,6 @@
 import { useState } from "react";
 import css from "../css/login.module.css";
+import {GoogleLogin} from '@react-oauth/google';
 import google from "../../assets/Google.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -41,6 +42,22 @@ const UserSignup = () => {
     }
   };
 
+  const handleGoogleSuccess=async(response)=>{
+    const id_token=response.credential;
+    try{
+      const res=await axios.post('http://localhost:4000/auth/google',{idtoken:id_token});
+      console.log("Google sign-in successful",res.data);
+      alert("Google sign-in successful")
+      navigator("/user-login");
+    }catch(err){
+      console.log(err);
+    }
+  };
+
+  const handleGoogleFailure=async(response)=>{
+    console.log(response);
+  };
+
   return (
     <>
     <section className={css["registerSec"]}>
@@ -54,8 +71,15 @@ const UserSignup = () => {
           </a>
         </div>
         <div className={css["googleSignIn"]}>
-          <img src={google} alt="" />
-          <span>Sign in with Google</span>
+        <GoogleLogin
+            onSuccess={handleGoogleSuccess}
+            onError={handleGoogleFailure}
+            render={({ onClick }) => (
+              <button onClick={onClick} className={css["googleSignInBtn"]}>
+                <img src={google} alt="Google icon" /> Sign in with Google
+              </button>
+            )}
+          />
         </div>
         <hr />
         <input type="text" placeholder="Full name" className={css["toggle"]} />

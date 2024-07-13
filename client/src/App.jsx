@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense} from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import IAmNewHere from "./components/IAmNewHere";
 import ContactUs from "./components/ContactUs";
 import TwoZeroTwoFour from "./components/TwoZeroTwoFour";
@@ -105,7 +106,11 @@ const App = () => {
               </Suspense>
             }
           />
-          <Route path="/user-signup" element={<UserSignup />} />
+          <Route path="/user-signup" element={
+             <GoogleOAuthProvider clientId="774053037010-hcsppnuntupuq5b164vccaks4kbur529.apps.googleusercontent.com">
+             <UserSignup />
+             </GoogleOAuthProvider>
+            } />
           <Route path="/forget-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
           {/* Footer */}
