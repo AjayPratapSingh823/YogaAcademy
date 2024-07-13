@@ -1,55 +1,103 @@
 import React from 'react'
 import css from "../css/group-classes.module.css";
-import yogaTemp from "../../assets/yoga-temp.jpg";
-
+import bottomImg from '../../assets/Classes assets/bottomImg.jpg'
+import mainSecImg from '../../assets/Classes assets/mainSecImg.jpg'
+import onlineModule from '../../assets/Classes assets/onlineModuleImg.jpeg'
+import sideImg1 from '../../assets/Classes assets/sideImg1.jpeg'
 
 const KidsClass = () => {
   return (
-    <div>
-      <main className={css["kids-bg"]}>
-        <div className={css["main-box"]}>
-          <h1>Kids Yoga Classes</h1>
-        </div>
-      </main>
-      <div className={css["second-div"]} style={{background: "linear-gradient(135deg, rgb(240, 142, 255) 0%, rgb(255, 244, 221) 50%, white)"}}>
-        <div className={css["flex"]}>
-          <div className={css["text"]}>
-            <h4>
-              Good friends don't let you do cool things... alone!!! And so, all
-              you will have to do is sign up for our Group Yoga Classes at AYS
-              Because
-            </h4>
-            <ul>
-              <li>It is 60 mins of Yoga</li>
-              <li>It is an hour of Fun</li>
-              <li>It is a group of people who Love Yoga</li>
-            </ul>
-          </div>
-          <img src={yogaTemp} alt="" />
-        </div>
-      </div>
-      <div className={css["third-div"]}>
-        <h1>Enjoy The Vibe Of The Group Energy In Your Yoga Classes</h1>
-        <h2>Now Avail In Offline / Online Yoga Group Classes</h2>
-        <h3>Wondering What You Will Practice?</h3>
+    <>
+<section className={css["trainerTop"]}>
+      <div><h1>Offline / Online Kids Yoga Classes</h1></div>
+    </section>
+    <main>
+      <div className={css["mainOut1"]}>
         <p>
-          The Vinyasa Krama online/in studio group Class at Atma Yoga Shala is a
-          60 minute practice that incorporates Asana (physical exercises),
-          Pranayama (breath work) and Dharana/ Dhyana (meditation). The practice
-          of Asana (physical exercise) involves Yoga postures includes
-          repetitive dynamic movements with breath and also static postures.
-          Dynamic asanas works on the joints, muscles and the static asanas on
-          the internal organs. Pranayama (Breath work) techniques to improve the
-          breathing capacity and also helps improve energy levels in the body.
-          Dharana/Dhyana (mindfulness & meditation) techniques and practices
-          address the mind, producing a calming effect and also helps develop
-          focus. AYS Group Yoga classes aim at providing a holistic experience.
+          “My Yoga time is my ALONE TIME and it better be so!!”<br />
+          <br />
+          Oh yes! we hear you. Looking for some Kids Yoga Lessons And why
+          should you?
         </p>
+        <ul>
+          <li>Tailor made to suit my needs</li>
+          <li>Goal specific Yoga Practice</li>
+          <li>My Yoga Practice with a trainer only for Me</li>
+        </ul>
       </div>
-      <div className="text-center">
-      <a href="/all-kids-classes" className="btn btn-dark m-2 center">Explore Our Classes</a>
+      <div className={css["mainOut2"]}>
+        <div><img src={mainSecImg} alt="" /></div>
       </div>
+    </main>
+
+    {/* <!-- Private className section --> */}
+    <section className={css["privateSec"]}>
+      <h2>Three Roads Diverged In Private className Sessions</h2>
+      <h2>Private Yoga Classes At Studio/Home</h2>
+      <p>
+        We offer hour-long private Vinyasa Krama Yoga classes at the Studio. A
+        trainer will be assigned for your private className who will guide you in
+        person during your practice. The sessions will be designed in a way to
+        ensure progress from your current state towards a specific goal. Classes
+        will include:
+      </p>
+    </section>
+
+    {/* <!-- side Section1 --> */}
+    <section className={css["sideSec1"]}>
+      <div className={css["sideSec1OuterDiv"]}>
+        <img src={sideImg1} alt="" />
+      </div>
+      <div className={css["sideSec1OuterDiv"]}>
+        <h3>What Can You Expect In The Module?</h3>
+        <ul>
+          <li>Asana</li>
+          <li>Pranayama</li>
+          <li>and Mindfulness/Meditation practices</li>
+        </ul>
+      </div>
+    </section>
+
+    {/* <!-- Online module Section --> */}
+    <div className={css["onlineModule"]}>
+      <h3>Private Classes Online Modules</h3>
+      <p>
+        Private className Online Module for Yoga is designed to provide personalized
+        instruction in the practice of yoga & also to be flexible and
+        accessible, allowing you to work at your own pace.
+      </p>
     </div>
+
+    {/* <!-- side Section2 --> */}
+    <section className={css["sideSec2"]}>
+      <div className={css["sideSec2OuterDiv"]}>
+        <h3>What Can You Expect In The Module?</h3>
+        <ul>
+          <li>Asana</li>
+          <li>Pranayama</li>
+          <li>and Mindfulness/Meditation practices</li>
+        </ul>
+      </div>
+      <div className={css["sideSec2OuterDiv"]}>
+        <img src={onlineModule} alt="" />
+      </div>
+    </section>
+
+    {/* <!-- Bottom Secction --> */}
+    <section className={css["bottomSec"]}>
+      <div className={css["bottomSecOuterDiv"]}>
+        <img src={bottomImg} alt="" />
+      </div>
+      <div className={css["bottomSecOuterDiv"]}>
+        <h3>Private Classes</h3>
+        <p>
+          Yoga for complete beginners and all levels that meets your <br />
+          fitness and health requirements!
+        </p>
+        <b>Get Personal Yoga Instructor from AYS</b>
+      </div>
+    </section>
+    </>
   )
 }
 
