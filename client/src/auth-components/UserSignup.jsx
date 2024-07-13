@@ -45,10 +45,10 @@ const UserSignup = () => {
   const handleGoogleSuccess=async(response)=>{
     const id_token=response.credential;
     try{
-      const res=await axios.post('http://localhost:4000/auth/google',{idtoken:id_token});
+      const res=await axios.post('http://localhost:4000/api/google',{idtoken:id_token});
       console.log("Google sign-in successful",res.data);
       alert("Google sign-in successful")
-      navigator("/user-login");
+      navigator("/");
     }catch(err){
       console.log(err);
     }
