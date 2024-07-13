@@ -1,10 +1,12 @@
 import React from "react";
+import google from "../../assets/Google.png";
+import css from "../css/login.module.css";
 
 const AdminLogin = () => {
   return (
     <>
       <div className={css["top-div"]}>
-        <h2>User Login</h2>
+        <h2>Admin Login</h2>
       </div>
       <section className={css["registerSec"]}>
         <form>
@@ -12,7 +14,7 @@ const AdminLogin = () => {
             <a class={css["active-btn"]} id="signIn">
               Sign In
             </a>
-            <a href="/user-signup" class={css["signInRegister"]} id="register">
+            <a href="/admin-signup" class={css["signInRegister"]} id="register">
               Register
             </a>
           </div>

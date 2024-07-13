@@ -11,7 +11,7 @@ const AdminSignup = () => {
     <section className={css["registerSec"]}>
       <form>
         <div class={css["formOuter"]}>
-          <a href="/user-login" class={css["signInRegister"]} id="signIn">
+          <a href="/admin-login" class={css["signInRegister"]} id="signIn">
             Sign In
           </a>
           <a class={css["active-btn"]} id="register">
