@@ -21,6 +21,7 @@ const UserSignup = () => {
       ...Form,
       [name]: value,
     });
+    console.log(Form.fullname);
   };
 
   const handleSubmit = async (e) => {
@@ -82,13 +83,14 @@ const UserSignup = () => {
           />
         </div>
         <hr />
-        <input type="text" placeholder="Full name" className={css["toggle"]} onChange={handleChange}/>
-        <input type="tel" placeholder="Phone number" className={css["toggle"]} onChange={handleChange}/>
-        <input type="email" placeholder="Email" onChange={handleChange}/>
-        <input type="password" autoComplete="" placeholder="Password" onChange={handleChange}/>
+        <input type="text" placeholder="Full name" name="fullname" className={css["toggle"]} onChange={handleChange}/>
+        <input type="tel" placeholder="Phone number" name="phone" className={css["toggle"]} onChange={handleChange}/>
+        <input type="email" placeholder="Email" name="email" onChange={handleChange}/>
+        <input type="password" autoComplete="" name="password" placeholder="Password" onChange={handleChange}/>
+        <input type="password" autoComplete="" name="confirmpassword" placeholder="Confirm Password" onChange={handleChange}/>
         <p>
           <input type="checkbox" style={{ width: "1em" }} /> I agree to the
-          <a href="" id="forgotPass">
+          <a href="" id="">
             Terms of Service & Privacy Policy
           </a>
         </p>
