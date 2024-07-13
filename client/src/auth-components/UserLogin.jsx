@@ -26,7 +26,7 @@ const UserLogin = () => {
         Form
       );
       console.log(response.data.user.fullname);
-      localStorage.setItem("full Name:", response.data.user.fullname);
+      localStorage.setItem("fullname:", response.data.user.fullname);
       localStorage.setItem("Phone:", response.data.user.phone);
       localStorage.setItem("Email:", response.data.user.email);
 
@@ -41,22 +41,22 @@ const UserLogin = () => {
   return (
     <>
       <section className={css["registerSec"]}>
-        <form>
-          <div class={css["formOuter"]}>
-            <a class={css["active-btn"]} id="signIn">
+        <form onSubmit={handleSubmit}>
+          <div className={css["formOuter"]}>
+            <a className={css["active-btn"]} id="signIn">
               Sign In
             </a>
-            <a href="/user-signup" class={css["signInRegister"]} id="register">
+            <a href="/user-signup" className={css["signInRegister"]} id="register">
               Register
             </a>
           </div>
-          <div class={css["googleSignIn"]}>
+          <div className={css["googleSignIn"]}>
             <img src={google} alt="" />
             <span>Sign in with Google</span>
           </div>
           <hr />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" name="email" placeholder="Email" onChange={handleChange}/>
+          <input type="password" name="password" placeholder="Password" onChange={handleChange}/>
           <p>
             <input type="checkbox" style={{ width: "1em" }} /> I agree to the
             <a href="" id="forgotPass">
@@ -64,7 +64,7 @@ const UserLogin = () => {
             </a>
           </p>
           <a href="/forget-password">Forgot Password?</a>
-          <button>Login</button>
+          <button type="submit">Login</button>
           <a href="/login-page" className={css["form-btn"]}>Back</a>
         </form>
       </section>

@@ -136,15 +136,16 @@ p a {
     background-color: #e7e6e6;
 }
 .center-div{
-    /* width: 300px; */
+    width: 300px;
     color: #2d93ad;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 10px;
     background-color: #f1f1f1;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 50px;  
+    box-shadow: 2px 2px 5px 5px grey;
 }
 .center-div h1{
     font-weight: 900;
@@ -153,7 +154,7 @@ p a {
 }
 .center-div a{
     font-size: 20px;
-    padding: 10px 100px;
+    padding: 5px;
     border-radius: 30px;
     text-decoration: none;
     border: 2px solid #2d93ad;

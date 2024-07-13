@@ -6,7 +6,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(()=>{
-  localStorage.length === 0 ? setIsLoggedIn(false) : setIsLoggedIn(true) 
+  !localStorage.fullname ? setIsLoggedIn(false) : setIsLoggedIn(true) 
   }, [])
 
   const logout = ()=>{
