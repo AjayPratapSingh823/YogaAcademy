@@ -74,7 +74,7 @@ const UserLogin = () => {
             onError={handleGoogleFailure}
             render={({ onClick }) => (
               <button onClick={onClick} className={css["googleSignInBtn"]}>
-                <img src={google} alt="Google icon" /> Sign in with Google
+                <img src={google} alt="Google icon" />Sign in with Google
               </button>
             )}
           />
