@@ -61,7 +61,7 @@ const UserSignup = () => {
   return (
     <>
     <section className={css["registerSec"]}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className={css["formOuter"]}>
           <a href="/user-login" className={css["signInRegister"]} id="signIn">
             Sign In
@@ -82,17 +82,17 @@ const UserSignup = () => {
           />
         </div>
         <hr />
-        <input type="text" placeholder="Full name" className={css["toggle"]} />
-        <input type="tel" placeholder="Phone number" className={css["toggle"]} />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Full name" className={css["toggle"]} onChange={handleChange}/>
+        <input type="tel" placeholder="Phone number" className={css["toggle"]} onChange={handleChange}/>
+        <input type="email" placeholder="Email" onChange={handleChange}/>
+        <input type="password" autoComplete="" placeholder="Password" onChange={handleChange}/>
         <p>
           <input type="checkbox" style={{ width: "1em" }} /> I agree to the
           <a href="" id="forgotPass">
             Terms of Service & Privacy Policy
           </a>
         </p>
-        <button>REGISTER</button>
+        <button type="submit">REGISTER</button>
         <a href="/login-page" className={css["form-btn"]}>Back</a>
       </form>
     </section>
