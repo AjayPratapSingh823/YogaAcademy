@@ -6,6 +6,7 @@ import './Chat.css'; // Create and import a CSS file for styling
 function Chat() {
   const [showBot, setShowBot] = useState(false);
 
+  
   const steps = [
     {
       id: 'Greet',
