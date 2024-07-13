@@ -11,10 +11,8 @@ const UserDashboard = () => {
   const [userName,setUserName]=useState('');
   useEffect(()=>{
    const photo=localStorage.getItem('Photo');
-   const userName=localStorage.getItem('full Name:');
-   console.log(photo);
+   const userName=localStorage.getItem('fullname');
    setUserName(userName)
-   console.log(userName);
    setprofilephoto(photo);
   },[])
   let dashRoute = ()=>{

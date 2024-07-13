@@ -76,7 +76,11 @@ const App = () => {
           <Route path="/all-private-classes" element={<AllPrivateClasses></AllPrivateClasses>}  />
           <Route path="/private-classes" element={<PrivateClass />} />
           {/* User */}
-          <Route path="/user-dashboard" element={<UserDashboard />} />
+          <Route path="/user-dashboard" element={
+            <GoogleOAuthProvider clientId="774053037010-hcsppnuntupuq5b164vccaks4kbur529.apps.googleusercontent.com">
+                <UserDashboard />
+                </GoogleOAuthProvider>
+          } />
           <Route path="/user-opt-courses" element={<UserOptCourses />} />
           <Route path="/user-payment" element={<UserPayment />} />
           <Route path="/user-profile" element={<UserProfile />} />
