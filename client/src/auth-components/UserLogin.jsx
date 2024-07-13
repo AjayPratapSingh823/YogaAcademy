@@ -40,9 +40,6 @@ const UserLogin = () => {
   };
   return (
     <>
-      <div className={css["top-div"]}>
-        <h2>User Login</h2>
-      </div>
       <section className={css["registerSec"]}>
         <form>
           <div class={css["formOuter"]}>

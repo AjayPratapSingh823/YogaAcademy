@@ -43,26 +43,23 @@ const UserSignup = () => {
 
   return (
     <>
-    <div className={css["top-div"]}>
-    <h2>User Sign up</h2>
-  </div>
     <section className={css["registerSec"]}>
       <form>
-        <div class={css["formOuter"]}>
-          <a href="/user-login" class={css["signInRegister"]} id="signIn">
+        <div className={css["formOuter"]}>
+          <a href="/user-login" className={css["signInRegister"]} id="signIn">
             Sign In
           </a>
-          <a class={css["active-btn"]} id="register">
+          <a className={css["active-btn"]} id="register">
             Register
           </a>
         </div>
-        <div class={css["googleSignIn"]}>
+        <div className={css["googleSignIn"]}>
           <img src={google} alt="" />
           <span>Sign in with Google</span>
         </div>
         <hr />
-        <input type="text" placeholder="Full name" class={css["toggle"]} />
-        <input type="tel" placeholder="Phone number" class={css["toggle"]} />
+        <input type="text" placeholder="Full name" className={css["toggle"]} />
+        <input type="tel" placeholder="Phone number" className={css["toggle"]} />
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <p>
