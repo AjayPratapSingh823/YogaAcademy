@@ -82,21 +82,16 @@
 .googleSignIn {
   display: flex;
   justify-content: center;
-  border: 1px solid #2d93ad;
+  font-size:30px;
   gap: 10px;
-  padding: 10px;
   margin: 10px;
   width: 95%;
   border-radius: 5px;
   margin: 10px;
   color: #2d93ad;
 }
-.googleSignIn:hover {
-  transform: translateY(-2px);
-  box-shadow: 1px 2px 2px black;
-}
 .googleSignIn img {
-  width: 25px;
+  width: 50px;
 }
 .form-form{
     text-align: center;

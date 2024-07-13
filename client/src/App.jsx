@@ -102,7 +102,9 @@ const App = () => {
             path="/user-login"
             element={
               <Suspense fallback={<div>Loading...</div>}>
+                <GoogleOAuthProvider clientId="774053037010-hcsppnuntupuq5b164vccaks4kbur529.apps.googleusercontent.com">
                 <UserLogin />
+                </GoogleOAuthProvider>
               </Suspense>
             }
           />

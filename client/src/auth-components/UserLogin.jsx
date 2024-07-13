@@ -2,6 +2,7 @@ import { useState } from "react";
 import css from "../css/login.module.css";
 import axios from "axios";
 import google from "../../assets/Google.png";
+import {GoogleLogin} from '@react-oauth/google';
 import { useNavigate } from "react-router-dom";
 
 const UserLogin = () => {
@@ -38,6 +39,23 @@ const UserLogin = () => {
       console.log(err);
     }
   };
+
+  const handleGoogleSuccess=async(response)=>{
+    const id_token=response.credential;
+    try{
+      const res=await axios.post('http://localhost:4000/api/google',{idtoken:id_token});
+      console.log("Google sign-in successful",res.data);
+      alert("Google sign-in successful")
+      navigator("/");
+    }catch(err){
+      console.log(err);
+    }
+  };
+
+  const handleGoogleFailure=async(response)=>{
+    console.log(response);
+  };
+
   return (
     <>
       <section className={css["registerSec"]}>
@@ -50,7 +68,7 @@ const UserLogin = () => {
               Register
             </a>
           </div>
-          <div className={css["googleSignIn"]}>
+          <div class={css["googleSignIn"]}>
             <img src={google} alt="" />
             <span>Sign in with Google</span>
           </div>
